@@ -382,17 +382,18 @@ export const cataractContent = {
       "Accurate diagnosis, careful surgical planning and appropriate lens calculation are important parts of cataract care. Our team combines clinical experience with modern examination and surgical systems to deliver carefully planned treatment.",
     images: [
       {
-        src: "/assets/cataract/tech1.png",
+        src: "/assets/cataract/techs1.png",
         alt: "Advanced surgical microscope used in cataract surgery",
       },
       {
-        src: "/assets/cataract/tech2.png",
+        src: "/assets/cataract/techs2.png",
         alt: "Slit lamp biomicroscope for eye examination",
       },
       {
-        src: "/assets/cataract/tech5.png",
+        src: "/assets/cataract/techs3.png",
         alt: "Ophthalmic examination chair and slit lamp setup",
       },
+
     ],
   },
   faq: {

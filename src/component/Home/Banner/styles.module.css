@@ -2,18 +2,33 @@
   position: relative;
   width: 100%;
   min-height: var(--hero-height);
-  overflow: hidden;
-  background-color: #f7f1ea;
+  display: flex;
+  align-items: center;
+  background-color: #f7f0e7;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/assets/Home/new_background.png");
+  background-image: url("/assets/Home/homebg.png");
   background-repeat: no-repeat;
-  background-position: 55% center;
-  background-size: auto 116%;
+  background-position: right center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.nabhLogoWrapper {
+  position: absolute;
+  top: 32px;
+  right: 56px;
+  z-index: 10;
+}
+
+.nabhLogo {
+  height: auto;
+  width: 110px;
+  object-fit: contain;
 }
 
 .heroInner {
@@ -21,12 +36,14 @@
   z-index: 1;
   width: min(calc(100% - 56px), 1440px);
   margin: 0 auto;
-  padding: 38px 0 84px;
+  padding: 80px 0 160px;
   padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .copy {
-  max-width: 700px;
+  max-width: 680px;
   padding-top: 4px;
 }
 
@@ -36,7 +53,7 @@
   gap: 12px;
   margin-bottom: 28px;
   font-family: var(--font-satoshi);
-  color: var(--color-coral);
+  color: #1a73e8; /* Blue eyebrow matching theme */
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -44,20 +61,20 @@
 
 .eyebrowLine {
   display: inline-block;
-  width: 160px;
+  width: 120px;
   height: 2px;
-  background: var(--color-coral);
+  background: #1a73e8; /* Blue line */
 }
 
 .title {
-  max-width: 700px;
+  max-width: 680px;
   margin: 0;
   font-family: var(--font-satoshi);
-  color: var(--color-navy);
-  font-size: clamp(52px, 4.6vw, 76px);
-  font-weight: 500;
-  letter-spacing: -2px;
-  line-height: 0.98;
+  color: #711f1c; /* Dark maroon red from Figma */
+  font-size: clamp(48px, 4.4vw, 68px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
 }
 
 .titleLine {
@@ -65,146 +82,287 @@
 }
 
 .titleLine + .titleLine {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .description {
-  max-width: 700px;
-  margin: 34px 0 0;
+  max-width: 620px;
+  margin: 30px 0 0;
   font-family: var(--font-satoshi);
-  color: #111111;
-  font-size: clamp(20px, 1.35vw, 23px);
+  color: #4a4a4a;
+  font-size: clamp(17px, 1.15vw, 19px);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  min-width: 284px;
-  min-height: 56px;
+  gap: 12px;
+  min-width: 280px;
+  min-height: 54px;
   margin-top: 40px;
-  padding: 0 34px 0 38px;
+  padding: 0 32px;
   border-radius: 999px;
-  background: var(--color-orange);
+  background: #1a73e8; /* Figma-like blue CTA */
   font-family: var(--font-satoshi);
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.25);
 }
 
-.sparkles {
+.cta:hover {
+  background: #155cb8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 115, 232, 0.35);
+}
+
+/* Floating stats card styles */
+.statsCardWrapper {
   position: absolute;
-  right: 34px;
-  bottom: 26px;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 56px);
-  gap: 10px 28px;
+  bottom: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 56px), 1440px);
+  z-index: 2;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.sparkle {
-  width: 56px;
-  height: 56px;
-  background: var(--color-orange);
-  clip-path: polygon(50% 0, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0 50%, 37% 37%);
+.statsCard {
+  background: #ffffff;
+  border-left: 6px solid #1a73e8; /* Blue left indicator border */
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
 }
 
-@media (max-width: 1280px) {
+.statsItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #d2e3fc;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a73e8;
+  flex-shrink: 0;
+}
+
+.statsIcon {
+  color: #1a73e8;
+}
+
+.statsContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.statsNumber {
+  font-family: var(--font-satoshi);
+  color: #111111;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.statsLabel {
+  font-family: var(--font-satoshi);
+  color: #5f6368;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
   .heroInner {
-    width: min(calc(100% - 48px), 1280px);
-    padding-top: 40px;
+    padding: 60px 0 180px;
   }
 
-  .title {
-    max-width: 640px;
+  .statsCardWrapper {
+    justify-content: center;
+    left: 0;
+    transform: none;
+    width: 100%;
   }
 
-  .description {
-    max-width: 620px;
-  }
-
-  .copy {
-    max-width: 640px;
+  .statsCard {
+    width: 100%;
+    justify-content: space-around;
   }
 }
 
-@media (max-width: 980px) {
-  .heroInner {
-    width: calc(100% - 40px);
-    padding: 48px 0 112px;
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
   }
 
-  .copy {
-    max-width: 620px;
+  .hero::before {
+    background-image: url("/assets/Home/herobgmb.png");
+    background-position: center center;
   }
 
-  .title {
-    max-width: 620px;
-    line-height: 0.98;
-  }
-
-  .description {
-    max-width: 560px;
-  }
-
-  .sparkles {
+  .nabhLogoWrapper {
+    top: 24px;
     right: 24px;
-    bottom: 22px;
-    grid-template-columns: repeat(2, 46px);
-    gap: 8px 18px;
   }
 
-  .sparkle {
-    width: 46px;
-    height: 46px;
+  .nabhLogo {
+    width: 80px;
+  }
+
+  .heroInner {
+    padding: 80px 20px 180px;
+    width: 100%;
+  }
+
+  .statsCardWrapper {
+    bottom: -50px;
+  }
+
+  .statsCard {
+    gap: 20px;
+    padding: 20px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .hero {
+    min-height: 700px;
+    align-items: flex-start;
+  }
+
+  .hero::before {
+    background-image: url("/assets/Home/herobgmb.png");
+    background-position: top center;
+  }
+
+
   .heroInner {
-    width: calc(100% - 32px);
-    padding: 34px 0 108px;
-  }
-
-  .eyebrow {
-    gap: 10px;
-    margin-bottom: 22px;
-    font-size: 15px;
-  }
-
-  .eyebrowLine {
-    width: 82px;
+    padding: 80px 16px 180px;
   }
 
   .title {
-    font-size: clamp(42px, 12vw, 58px);
-    letter-spacing: -1.5px;
+    font-size: clamp(32px, 7.5vw, 42px);
+    line-height: 1.1;
   }
 
   .description {
-    margin-top: 26px;
-    font-size: 18px;
+    font-size: 15px;
+    margin-top: 16px;
+    line-height: 1.5;
   }
 
   .cta {
-    min-width: 100%;
-    margin-top: 32px;
+    width: 100%;
+    margin-top: 24px;
+    min-height: 50px;
+    font-size: 15px;
   }
 
-  .sparkles {
-    right: 16px;
-    bottom: 16px;
-    grid-template-columns: repeat(2, 34px);
-    gap: 6px 12px;
+  .statsCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
   }
 
-  .sparkle {
-    width: 34px;
-    height: 34px;
+  .statsItem {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .statsNumber {
+    font-size: 24px;
+  }
+
+  .statsLabel {
+    font-size: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .nabhLogoWrapper {
+    top: 16px;
+    right: 16px;
+  }
+
+  .nabhLogo {
+    width: 65px;
+  }
+
+  .heroInner {
+    padding: 70px 12px 180px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+    margin-bottom: 20px;
+    gap: 8px;
+  }
+
+  .eyebrowLine {
+    width: 60px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-top: 14px;
+  }
+
+  .cta {
+    min-height: 48px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .statsCardWrapper {
+    padding: 0 12px;
+    bottom: -60px;
+  }
+
+  .statsCard {
+    padding: 12px 16px;
+  }
+
+  .iconCircle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .statsNumber {
+    font-size: 20px;
+  }
+
+  .statsLabel {
+    font-size: 11px;
+  }
+}
+

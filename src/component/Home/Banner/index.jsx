@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Award, Users } from "lucide-react";
 import { homeContent } from "@/constant/homeContent";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import styles from "./styles.module.css";
@@ -9,6 +10,18 @@ export default function Banner() {
 
   return (
     <section className={styles.hero} aria-label="Namokar Eye hero">
+      {/* Top right NABH Logo */}
+      <div className={styles.nabhLogoWrapper}>
+        <Image
+          src="/assets/Header/Patient_saftey_logo.png"
+          alt="Patient Safety & Quality of Care NABH Certified Logo"
+          width={100}
+          height={100}
+          className={styles.nabhLogo}
+          priority
+        />
+      </div>
+
       <div className={styles.heroInner}>
         <div className={styles.copy}>
           <RevealOnView variant="fadeUp" delay={0}>
@@ -43,12 +56,33 @@ export default function Banner() {
         </div>
       </div>
 
-      <div className={styles.sparkles} aria-hidden="true">
-        <span className={styles.sparkle} />
-        <span className={styles.sparkle} />
-        <span className={styles.sparkle} />
-        <span className={styles.sparkle} />
+      {/* Stats Card at the bottom right */}
+      <div className={styles.statsCardWrapper}>
+        <div className={styles.statsCard}>
+          <div className={styles.statsItem}>
+            <div className={styles.iconCircle}>
+              <Award className={styles.statsIcon} size={22} />
+            </div>
+            <div className={styles.statsContent}>
+              <span className={styles.statsNumber}>25+</span>
+              <span className={styles.statsLabel}>Years Excellence</span>
+            </div>
+          </div>
+
+          <div className={styles.statsItem}>
+            <div className={styles.iconCircle}>
+              <Users className={styles.statsIcon} size={22} />
+            </div>
+            <div className={styles.statsContent}>
+              <span className={styles.statsNumber}>50K+</span>
+              <span className={styles.statsLabel}>Happy Patients</span>
+            </div>
+          </div>
+        </div>
       </div>
+
     </section>
   );
 }
+
+

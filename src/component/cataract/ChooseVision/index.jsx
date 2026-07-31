@@ -29,13 +29,13 @@ export default function ChooseVision() {
             <table className={styles.table}>
               <thead>
                 <tr>
-                  <th className={`${styles.th} ${styles.featureCol}`}>
+                  <th className={`${styles.th} ${styles.featureCol} ${styles.standardHeader}`}>
                     <div className={styles.featureHeader}>Feature</div>
                   </th>
                   {columns.map((col) => (
                     <th
                       key={col.id}
-                      className={`${styles.th} ${col.popular ? styles.popularCol : ""}`}
+                      className={`${styles.th} ${col.popular ? styles.popularHeader : styles.standardHeader}`}
                     >
                       {col.popular && (
                         <div className={styles.popularBadge}>
@@ -51,6 +51,33 @@ export default function ChooseVision() {
                 </tr>
               </thead>
               <tbody>
+                {/* Special Row: Lens Design */}
+                <tr className={styles.dataRow}>
+                  <td className={`${styles.td} ${styles.featureCol}`}>
+                    <span className={styles.rowLabel}>Lens Design</span>
+                  </td>
+                  {columns.map((col) => (
+                    <td
+                      key={col.id}
+                      className={`${styles.td} ${col.popular ? styles.popularCol : ""}`}
+                    >
+                      <div className={styles.lensDesignWrapper}>
+                        <div className={styles.lensImageContainer}>
+                          <Image
+                            src={col.image}
+                            alt={`${col.title} design`}
+                            width={110}
+                            height={110}
+                            className={styles.lensImage}
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Normal rows */}
                 {rows.map((row, idx) => (
                   <tr key={idx} className={styles.dataRow}>
                     <td className={`${styles.td} ${styles.featureCol}`}>
@@ -67,7 +94,7 @@ export default function ChooseVision() {
                         >
                           <div className={styles.cellContent}>
                             {val?.check && (
-                              <Check size={18} className={styles.checkIcon} strokeWidth={3} />
+                              <Check size={16} className={styles.checkIcon} strokeWidth={3} />
                             )}
                             <span
                               className={`${styles.cellText} ${
@@ -93,7 +120,7 @@ export default function ChooseVision() {
         <RevealOnView variant="fadeUp" delay={200}>
           <div className={styles.noteBox}>
             <div className={styles.noteIconWrapper}>
-              <Info size={24} className={styles.noteIcon} />
+              <Info size={22} className={styles.noteIcon} />
             </div>
             <div className={styles.noteContent}>
               <h4 className={styles.noteTitle}>{surgeonNote.title}</h4>
@@ -107,7 +134,7 @@ export default function ChooseVision() {
           <div className={styles.ctaWrapper}>
             <Link href={cta.href} className={styles.ctaButton}>
               <span>{cta.label}</span>
-              <ArrowRight size={20} strokeWidth={2.5} />
+              <ArrowRight size={18} strokeWidth={2.5} />
             </Link>
           </div>
         </RevealOnView>
