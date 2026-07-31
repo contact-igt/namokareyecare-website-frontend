@@ -70,18 +70,18 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: 1px solid #cfd8e3;
+  border: 1px solid var(--color-coral, #ff684c);
   background: #ffffff;
-  color: #2aa7ff;
+  color: var(--color-coral, #ff684c);
   cursor: pointer;
   transition: all 0.23s ease;
 }
 
 .navButton:hover {
-  background: #2aa7ff;
+  background: var(--color-coral, #ff684c);
   color: #ffffff;
-  border-color: #2aa7ff;
-  box-shadow: 0 5px 15px rgba(42, 167, 255, 0.2);
+  border-color: var(--color-coral, #ff684c);
+  box-shadow: 0 5px 15px rgba(255, 104, 76, 0.2);
 }
 
 .carouselContainer {

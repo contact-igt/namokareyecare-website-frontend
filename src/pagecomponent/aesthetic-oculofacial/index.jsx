@@ -1,11 +1,8 @@
-import {
-  AestheticOculofacialBanner,
-  WhatIsAestheticOculoplasty,
-  ExpectedApproach,
-  BeforeAfterOculoplasty,
-  SpecialistLedApproach,
-  AestheticOculoplastyTreatments,
-} from "@/component/Aesthetic";
+import { AestheticAssessment, AestheticCta, AestheticOculofacialBanner, AestheticOculoplastyTreatments, AestheticWhyChoose, BeforeAfterOculoplasty, ExpectedApproach, SpecialistLedApproach, WhatIsAestheticOculoplasty } from "@/component/Aesthetic";
+import { CataractFaq } from "@/component/cataract";
+import DoctorsAppointment from "@/component/Home/DoctorsAppointment";
+import Testimonials from "@/component/Home/Testimonials";
+
 
 export default function AestheticOculofacialPage() {
   return (
@@ -13,9 +10,15 @@ export default function AestheticOculofacialPage() {
       <AestheticOculofacialBanner />
       <WhatIsAestheticOculoplasty />
       <ExpectedApproach />
+      <AestheticOculoplastyTreatments />
+      <AestheticAssessment />
       <BeforeAfterOculoplasty />
       <SpecialistLedApproach />
-      <AestheticOculoplastyTreatments />
+      <AestheticWhyChoose />
+      <DoctorsAppointment />
+      <CataractFaq />
+      <Testimonials />
+      <AestheticCta />
     </main>
   );
 }

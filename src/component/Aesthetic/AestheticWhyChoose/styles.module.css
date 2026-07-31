@@ -1,0 +1,135 @@
+.section {
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--site-width, 1320px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.contentColumn {
+  position: relative;
+  z-index: 2;
+}
+
+.contentWrapper {
+  background: #ffffff;
+  padding: 80px 60px;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(23, 46, 69, 0.08);
+  margin-right: -100px;
+  position: relative;
+  border: 1px solid rgba(23, 46, 69, 0.05);
+}
+
+.contentWrapper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255,97,74,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: -1;
+}
+
+.imageColumn {
+  position: relative;
+  z-index: 1;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 97, 74, 0.1);
+  color: #FF614A;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.title {
+  color: #172E45;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+
+.description {
+  color: #4a5568;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.highlightBox {
+  background: #fcfcfc;
+  border-left: 4px solid #1A73E8;
+  padding: 24px 32px;
+  border-radius: 0 16px 16px 0;
+}
+
+.highlightText {
+  color: #172E45;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .contentWrapper {
+    padding: 60px 40px;
+    margin-right: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contentWrapper {
+    margin-right: 0;
+    padding: 40px 24px;
+    box-shadow: 0 10px 30px rgba(23, 46, 69, 0.05);
+  }
+  .imageColumn {
+    order: -1;
+  }
+  .imageWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

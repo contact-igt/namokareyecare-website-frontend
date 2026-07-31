@@ -29,9 +29,9 @@ function TestimonialCard({ review }) {
       <div className={styles.stars}>
         {[...Array(5)].map((_, idx) => {
           if (idx < Math.floor(review.stars)) {
-            return <Star key={idx} size={16} fill="#2aa7ff" color="#2aa7ff" className={styles.starIcon} />;
+            return <Star key={idx} size={16} fill="#ff9800" color="#ff9800" className={styles.starIcon} />;
           } else if (idx < Math.ceil(review.stars)) {
-            return <StarHalf key={idx} size={16} fill="#2aa7ff" color="#2aa7ff" className={styles.starIcon} />;
+            return <StarHalf key={idx} size={16} fill="#ff9800" color="#ff9800" className={styles.starIcon} />;
           } else {
             return <Star key={idx} size={16} color="#cfd8e3" className={styles.starIcon} />;
           }

@@ -4,3 +4,6 @@ export { default as ExpectedApproach } from "./ExpectedApproach";
 export { default as BeforeAfterOculoplasty } from "./BeforeAfterOculoplasty";
 export { default as SpecialistLedApproach } from "./SpecialistLedApproach";
 export { default as AestheticOculoplastyTreatments } from "./AestheticOculoplastyTreatments";
+export { default as AestheticAssessment } from "./AestheticAssessment";
+export { default as AestheticWhyChoose } from "./AestheticWhyChoose";
+export { default as AestheticCta } from "./AestheticCta";

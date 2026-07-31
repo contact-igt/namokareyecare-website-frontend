@@ -18,6 +18,15 @@
   z-index: 0;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 45%, rgba(255, 255, 255, 0) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
 
 .nabhLogoWrapper {
   position: absolute;
@@ -234,6 +243,10 @@
     background-image: url("/assets/cataract/cataractmb.png");
     background-position: top center;
     background-size: cover;
+  }
+  
+  .hero::after {
+    background: linear-gradient(rgb(255 255 255 / 49%) 0%, rgb(255 255 255 / 94%) 45%, rgba(255, 255, 255, 0) 100%);
   }
 
   .heroInner {

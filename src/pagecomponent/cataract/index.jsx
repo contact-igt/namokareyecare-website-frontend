@@ -11,6 +11,8 @@ import {
   CataractFaq,
   CataractCta,
 } from "@/component/cataract";
+import DoctorsAppointment from "@/component/Home/DoctorsAppointment";
+import Testimonials from "@/component/Home/Testimonials";
 
 export default function CataractPage() {
   return (
@@ -24,7 +26,9 @@ export default function CataractPage() {
       <CataractTreatmentExpectations />
       <ChooseVision />
       <ModernTech />
+      <DoctorsAppointment />
       <CataractFaq />
+      <Testimonials />
       <CataractCta />
     </main>
   );
