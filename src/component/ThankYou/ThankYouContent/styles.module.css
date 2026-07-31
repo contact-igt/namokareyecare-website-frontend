@@ -1,0 +1,133 @@
+.section {
+  width: 100%;
+  padding: 100px 0 120px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, var(--site-width, 1320px));
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contentBox {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  margin: 0 0 20px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-navy, #1b4281);
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+
+.description {
+  margin: 0 auto 44px;
+  max-width: 720px;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #64748b;
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btnOutline,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 200px;
+  height: 54px;
+  padding: 0 24px 0 28px;
+  border-radius: 999px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btnOutline {
+  border: 1.5px solid #d1d5db;
+  background: #ffffff;
+  color: var(--color-navy, #1b4281);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.btnOutline:hover {
+  border-color: var(--color-navy, #1b4281);
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 66, 129, 0.08);
+}
+
+.btnSecondary {
+  border: 1.5px solid #e2e8f0;
+  background: #f1f5f9;
+  color: var(--color-navy, #1b4281);
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-navy, #1b4281);
+  background: var(--color-navy, #1b4281);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 66, 129, 0.15);
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(27, 66, 129, 0.06);
+  color: var(--color-navy, #1b4281);
+  transition: all 0.3s ease;
+}
+
+.btnOutline:hover .iconCircle,
+.btnSecondary:hover .iconCircle {
+  background: var(--color-navy, #1b4281);
+  color: #ffffff;
+}
+
+.btnSecondary:hover .iconCircle {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0 80px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .btnOutline,
+  .btnSecondary {
+    width: 100%;
+    height: 50px;
+  }
+}

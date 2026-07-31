@@ -6,7 +6,7 @@ import RevealOnView from "@/common/RevealOnView";
 import styles from "./styles.module.css";
 
 export default function NewsArticles() {
-  const { eyebrow, title, articles } = newsArticlesContent;
+  const { eyebrow, title, description, articles } = newsArticlesContent;
 
   return (
     <section className={styles.newsSection} aria-labelledby="news-section-title">
@@ -32,6 +32,9 @@ export default function NewsArticles() {
             <h2 id="news-section-title" className={styles.title}>
               {title}
             </h2>
+            {description && (
+              <p className={styles.description}>{description}</p>
+            )}
           </div>
         </RevealOnView>
 

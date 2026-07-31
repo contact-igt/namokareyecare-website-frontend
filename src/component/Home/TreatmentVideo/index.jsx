@@ -17,7 +17,7 @@ const cardIcons = {
 };
 
 export default function TreatmentVideo() {
-  const { eyebrow, title, cards, media, sparkle, arrow } =
+  const { eyebrow, title, description, cards, media, sparkle, arrow } =
     homeContent.treatmentVideo;
 
   const videoRef = useRef(null);
@@ -38,6 +38,10 @@ export default function TreatmentVideo() {
           <h2 id="treatment-video-title" className={styles.title}>
             {title}
           </h2>
+
+          {description && (
+            <p className={styles.sectionDescription}>{description}</p>
+          )}
 
           <Image
             src={sparkle.src}

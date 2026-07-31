@@ -55,7 +55,10 @@ export default function Services() {
               <span className={styles.divider} aria-hidden="true" />
               <span className={styles.cardCopy}>
                 <span className={styles.cardTitle}>{item.title}</span>
-                <span className={styles.learnMore}>Learn More .....</span>
+                {item.description && (
+                  <span className={styles.cardDescription}>{item.description}</span>
+                )}
+                <span className={styles.learnMore}>Learn More</span>
               </span>
             </Link>
           ))}

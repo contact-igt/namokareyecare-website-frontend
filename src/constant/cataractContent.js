@@ -28,74 +28,63 @@ export const cataractContent = {
   },
   lensOptions: {
     eyebrow: "LENS OPTIONS",
-    titleLine1: "Our Advanced",
-    titleLine2: "Cataract Care",
-    subtitle: "Types of Intraocular Lenses (IOLs) - Choose the best option for your lifestyle",
+    titleLine1: "Premium IOL",
+    titleLine2: "Options",
+    subtitle:
+      "Depending on the patient's eye condition, visual needs, and doctor's recommendation, suitable lens options may include:",
+    disclaimer:
+      "Final lens selection should be done only after consultation and eye measurements.",
     items: [
       {
         id: "monofocal",
-        title: "Standard Monofocal",
+        title: "Monofocal IOL",
         category: "SINGLE FOCUS LENS",
-        description: "Provides clear vision at one distance (usually far). Reading glasses may still be needed for close work.",
+        description:
+          "Provides clear vision at one distance (usually far). Reading glasses may still be needed for close work.",
         points: [
           "Clear distance vision",
           "Covered by insurance",
           "Proven reliability",
         ],
         image: {
-          src: "/assets/cataract/lens_monofocal.png",
-          alt: "Standard Monofocal Eye Exam",
+          src: "/assets/cataract/monofocal.png",
+          alt: "Monofocal IOL – Single Focus Intraocular Lens",
         },
         icon: "Eye",
         featured: false,
       },
       {
         id: "multifocal",
-        title: "Premium Multifocal",
+        title: "Multifocal IOL",
         category: "MULTIPLE FOCUS LENS",
-        description: "Enables clear vision at multiple distances —near, intermediate, and far—reducing dependence on glasses.",
+        description:
+          "Enables clear vision at multiple distances — near, intermediate, and far — reducing dependence on glasses.",
         points: [
           "Multiple focal points",
           "Reduced glasses dependency",
           "Enhanced lifestyle",
         ],
         image: {
-          src: "/assets/cataract/lens_multifocal.png",
-          alt: "Premium Multifocal Advanced Testing",
+          src: "/assets/cataract/multifocal.png",
+          alt: "Multifocal IOL – Premium Multiple Focus Intraocular Lens",
         },
         icon: "Sparkles",
         featured: true,
       },
       {
-        id: "edof",
-        title: "EDOF (Extended Depth of Focus)",
-        category: "CONTINUOUS RANGE LENS",
-        description: "Provides a continuous range of high-quality vision for distance and intermediate tasks with reduced visual disturbances.",
-        points: [
-          "Extended range of vision",
-          "Ideal for screen & computer work",
-          "Minimal halos & glare",
-        ],
-        image: {
-          src: "/assets/cataract/lens3.png",
-          alt: "EDOF Lens Advanced Testing",
-        },
-        icon: "Eye",
-        featured: false,
-      },
-      {
         id: "toric",
-        title: "Toric Lens",
+        title: "Toric IOL",
         category: "ASTIGMATISM CORRECTION",
-        description: "Specially designed to correct astigmatism while providing clear distance vision in one procedure.",
+        description:
+          "Specially designed to correct astigmatism while providing clear distance vision in one procedure.",
         points: [
           "Corrects astigmatism",
           "Sharper clarity",
           "Single procedure",
         ],
         image: {
-          src: "/assets/cataract/lens_toric.png",
-          alt: "Toric Lens Doctor Consultation",
+          src: "/assets/cataract/toric.png",
+          alt: "Toric IOL – Astigmatism Correcting Intraocular Lens",
         },
         icon: "Target",
         featured: false,
@@ -147,35 +136,35 @@ export const cataractContent = {
       {
         id: 2,
         title: "30+ Years of Eye Care Experience",
-        subtitle: "Decades of expertise. Thousands of happy patients.",
+        subtitle: "Decades of expertise with thousands of satisfied patients.",
         icon: "Award",
         colorScheme: "orange",
       },
       {
         id: 3,
-        title: "NABH-accredited Eye Centre",
+        title: "NABH-Accredited Eye Centre",
         subtitle: "Trusted quality and safety standards in North Delhi.",
         icon: "Building2",
         colorScheme: "blue",
       },
       {
         id: 4,
-        title: "Advanced Cataract and Oculoplasty",
-        subtitle: "Comprehensive care for complex eye conditions under one roof.",
+        title: "Advanced Cataract & Oculoplasty Care",
+        subtitle: "Comprehensive eye treatment provided under one roof.",
         icon: "Eye",
         colorScheme: "orange",
       },
       {
         id: 5,
-        title: "Patient-centric Treatment Planning",
-        subtitle: "Personalized care tailored to your unique needs.",
+        title: "Patient-Centric Treatment Planning",
+        subtitle: "Personalized care plans tailored to your visual needs.",
         icon: "Users",
         colorScheme: "blue",
       },
       {
         id: 6,
-        title: "Cashless and EMI Support",
-        subtitle: "Hassle-free treatment with flexible payment options.",
+        title: "Cashless & EMI Support",
+        subtitle: "Hassle-free treatment with flexible insurance & payment options.",
         icon: "IndianRupee",
         colorScheme: "orange",
       },
@@ -220,32 +209,37 @@ export const cataractContent = {
     ],
   },
   treatmentExpectations: {
-    title: "What to Expect During Cataract Treatment",
+    title: "Patient Journey",
     steps: [
       {
         step: 1,
-        title: "Consultation and tests",
-        subtitle: "Initial evaluation and diagnostic tests",
+        title: "Detailed Eye Check-Up",
+        subtitle:
+          "A complete eye examination is done to assess cataract severity, eye health, and lens requirements.",
       },
       {
         step: 2,
-        title: "Lens selection and surgical planning",
-        subtitle: "Personalized treatment plan",
+        title: "Lens Power Calculation",
+        subtitle:
+          "Advanced diagnostic evaluation helps in planning the appropriate intraocular lens.",
       },
       {
         step: 3,
-        title: "Preoperative preparation",
-        subtitle: "Pre-surgery instructions and preparation",
+        title: "Surgery Planning",
+        subtitle:
+          "The doctor explains the procedure, lens options, precautions, and expected recovery.",
       },
       {
         step: 4,
-        title: "Cataract surgery",
-        subtitle: "Modern surgical procedure",
+        title: "Cataract Surgery",
+        subtitle:
+          "The cloudy lens is removed using phacoemulsification and replaced with an artificial lens.",
       },
       {
         step: 5,
-        title: "Follow-up and recovery guidance",
-        subtitle: "Post-operative care and monitoring",
+        title: "Post-Surgery Care",
+        subtitle:
+          "Patients receive post-operative instructions and follow-up guidance for safe recovery.",
       },
     ],
     note: "The exact treatment plan, recovery instructions and follow-up schedule will be explained by the treating doctor.",

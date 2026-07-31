@@ -1,39 +1,49 @@
 "use client";
 
-import { UserCheck, Heart, Shield, Award } from "lucide-react";
+import {
+  UserCheck,
+  Heart,
+  ShieldCheck,
+  Award,
+  Eye,
+  Building2,
+  GraduationCap,
+} from "lucide-react";
 import { aestheticOculofacialContent } from "@/constant/aestheticOculofacialContent";
 import RevealOnView from "@/common/RevealOnView";
 import styles from "./styles.module.css";
 
 const iconMap = {
-  UserCheck: UserCheck,
-  Heart: Heart,
-  Shield: Shield,
-  Award: Award,
+  UserCheck,
+  Heart,
+  ShieldCheck,
+  Award,
+  Eye,
+  Building2,
+  GraduationCap,
 };
 
 export default function SpecialistLedApproach() {
-  const { specialistApproach } = aestheticOculofacialContent;
-  const { title, subtitle, cards } = specialistApproach;
+  const { title, subtitle, reasons } = aestheticOculofacialContent.whyChooseNamokar;
 
   return (
-    <section className={styles.section} aria-labelledby="specialist-approach-title">
+    <section className={styles.section} aria-labelledby="why-choose-namokar-title">
       <div className={styles.container}>
         <RevealOnView variant="fadeUp">
           <div className={styles.header}>
-            <h2 id="specialist-approach-title" className={styles.title}>
+            <h2 id="why-choose-namokar-title" className={styles.title}>
               {title}
             </h2>
-            <p className={styles.subtitle}>{subtitle}</p>
+            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
         </RevealOnView>
 
         <div className={styles.grid}>
-          {cards.map((card, index) => {
-            const IconComponent = iconMap[card.icon] || UserCheck;
+          {reasons.map((card, index) => {
+            const IconComponent = iconMap[card.icon] || ShieldCheck;
 
             return (
-              <RevealOnView key={card.id} variant="fadeUp" delay={100 + index * 80}>
+              <RevealOnView key={card.id} variant="fadeUp" delay={100 + index * 60}>
                 <div className={styles.card}>
                   <div className={styles.iconCircle}>
                     <IconComponent size={24} className={styles.icon} />

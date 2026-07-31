@@ -1,6 +1,8 @@
 export const newsArticlesContent = {
-  eyebrow: "Our News",
+  eyebrow: "Our Blog",
   title: "Latest News & Articles",
+  description:
+    "Stay informed with expert insights on cataract surgery, eyelid disorders, watering eyes, glaucoma, eye health, and advances in oculoplasty.",
   articles: [
     {
       id: "best-orthopedic-surgeons",

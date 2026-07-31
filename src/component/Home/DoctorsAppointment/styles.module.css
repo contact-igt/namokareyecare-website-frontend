@@ -49,6 +49,16 @@
   letter-spacing: -0.2px;
 }
 
+.sectionDescription {
+  max-width: 640px;
+  margin: 8px 0 0;
+  font-family: var(--font-satoshi);
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
 .allDoctors {
   display: inline-flex;
   align-items: center;
@@ -88,6 +98,12 @@
   margin-top: 42px;
 }
 
+.singleDoctorBody {
+  grid-template-columns: minmax(440px, 640px) minmax(380px, 560px);
+  gap: 36px;
+  justify-content: center;
+}
+
 /* Base Doctor Card (Static layout, no entry animations) */
 .doctorCard {
   background: #ffffff;
@@ -115,7 +131,7 @@
 
 .largeDoctorImageWrap {
   width: 100%;
-  height: 440px;
+  height: 500px;
   overflow: hidden;
   background: #eef9ff;
   position: relative;
@@ -350,8 +366,9 @@
 
 .label {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 4px;
   width: 100%;
   color: #3b567d;
   font-size: 13px;
@@ -360,9 +377,10 @@
 }
 
 .required {
-  color: #111111;
+  color: #dc2626;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 14px;
+  margin-left: 1px;
 }
 
 .field input,
@@ -397,6 +415,17 @@
 .field input::placeholder {
   color: #94a3b8;
   opacity: 1;
+}
+
+.field input[type="date"]::-webkit-calendar-picker-indicator,
+.field input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .selectShell,
@@ -442,6 +471,100 @@
   box-shadow: 0 10px 19px rgba(26, 115, 232, 0.2);
 }
 
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.fieldError {
+  font-size: 11px;
+  color: #ef4444;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.serverError {
+  font-size: 12px;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.loadingText {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 20px;
+  text-align: center;
+}
+
+.successIcon {
+  color: #16a34a;
+  margin-bottom: 12px;
+}
+
+.successTitle {
+  font-family: var(--font-satoshi);
+  color: var(--color-navy, #1b4281);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.successDesc {
+  font-family: var(--font-satoshi);
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.resetButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #1a73e8;
+  background: #ffffff;
+  color: #1a73e8;
+  font-family: var(--font-satoshi);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resetButton:hover {
+  background: #1a73e8;
+  color: #ffffff;
+}
+
 /* Responsiveness */
 @media (max-width: 1400px) {
   .doctorsSection {
@@ -474,12 +597,23 @@
     gap: 24px;
   }
 
+  .singleDoctorBody {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+
   .formWrapper {
     grid-column: span 2;
-    max-width: 440px;
+    max-width: 520px;
     justify-self: center;
     margin: 0 auto;
     align-self: auto;
+  }
+
+  .singleDoctorBody .formWrapper {
+    grid-column: span 1;
+    max-width: 100%;
+    margin: 0;
   }
 
   .formCard {

@@ -70,7 +70,7 @@ export default function WhyChoose() {
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
           >
-            {highlights.map(({ label, icon }) => {
+            {highlights.map(({ label, description: itemDesc, icon }) => {
               const icons = { Award, Building2, Eye, ShieldCheck, CreditCard };
               const Icon = icons[icon];
               return (
@@ -79,8 +79,11 @@ export default function WhyChoose() {
                   className={styles.listItem}
                   variants={itemVariants}
                 >
-                  <Icon className={styles.listIcon} size={19} strokeWidth={2} />
-                  <span>{label}</span>
+                  <Icon className={styles.listIcon} size={22} strokeWidth={2} />
+                  <div className={styles.listText}>
+                    <span className={styles.listTitle}>{label}</span>
+                    {itemDesc && <p className={styles.listDesc}>{itemDesc}</p>}
+                  </div>
                 </motion.li>
               );
             })}

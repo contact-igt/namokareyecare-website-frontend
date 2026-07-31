@@ -1,14 +1,16 @@
 export const homeContent = {
   banner: {
-    eyebrow: "Expertise Your Eyes Deserve",
+    eyebrow: "Precision. Compassion. Technology.",
     title: [
-      "Complete Eye Care",
-      "for your Family",
+      "Restore",
+      "Confidence",
+      "with Advanced Eye",
+      "& Oculoplasty Care",
     ],
     description:
       "At Namokar Eye & Oculoplasty Centre, every treatment plan is designed around your individual needs, helping you achieve better vision, improved comfort, and renewed confidence.",
     cta: {
-      label: "Book Appointment Now",
+      label: "Book Appointment",
       href: "/appointment",
     },
 
@@ -20,36 +22,41 @@ export const homeContent = {
     },
   },
   services: {
-    eyebrow: "Our Specialized Treatments",
-    title: "Our Treatments",
+    eyebrow: "Our Specialized Services",
+    title: "Our Specialized Services",
     items: [
       {
         title: "Stitchless Cataract Surgery",
+        description:
+          "Advanced cataract treatment using modern phacoemulsification techniques and customized intraocular lens options.",
         href: "/treatments/cataract",
         icon: "cataract",
       },
       {
-        title: "Eyelid Surgery",
-        href: "/treatments/eyelid-surgery",
-        icon: "eyelid",
-      },
-      {
-        title: "Glaucoma Management",
-        href: "/treatments/glaucoma-management",
-        icon: "glaucoma",
-      },
-      {
-        title: "Aesthetic Oculofacial",
+        title: "Aesthetic Oculoplasty",
+        description:
+          "Specialized procedures focused on rejuvenating the eye area, including eyelid surgery, under-eye bag correction, and aesthetic oculofacial treatments.",
         href: "/treatments/aesthetic-oculofacial",
         icon: "aesthetic",
       },
       {
         title: "Reconstructive Oculoplasty",
+        description:
+          "Comprehensive treatment for ptosis, entropion, ectropion, eyelid abnormalities, tear drainage disorders, and other reconstructive eye conditions.",
         href: "/treatments/eye-plastic-reconstructive",
         icon: "reconstructive",
       },
       {
-        title: "Comprehensive Eye Exams",
+        title: "Glaucoma Management",
+        description:
+          "Early diagnosis, regular monitoring, and evidence-based treatment strategies to protect vision and manage glaucoma effectively.",
+        href: "/treatments/glaucoma-management",
+        icon: "glaucoma",
+      },
+      {
+        title: "Comprehensive Eye Examination",
+        description:
+          "Detailed eye evaluations for children and adults, helping detect eye conditions early and maintain long-term visual health.",
         href: "/treatments/comprehensive-eye-exams",
         icon: "exams",
       },
@@ -60,19 +67,39 @@ export const homeContent = {
     },
   },
   whyChoose: {
-    eyebrow: "India's Trusted Oculoplasty Specialists",
-    title: "Why Choose Namokar Eye\n& Oculoplasty Centre",
-    description: "",
+    eyebrow: "30+ Years of Excellence in Eye Care",
+    title: "Why Choose Namokar Eye\n& Oculoplasty Centre?",
+    description:
+      "Namokar Eye & Oculoplasty Centre combines specialized expertise, advanced diagnostics, and personalized patient care to deliver comprehensive eye treatment under one roof.",
     cta: {
       label: "Learn more",
       href: "/about-us",
     },
     highlights: [
-      { label: "30+ Years of Eye Care Experience", icon: "Award" },
-      { label: "Advanced Eye Care Infrastructure", icon: "Building2" },
-      { label: "Specialized Oculoplasty Expertise", icon: "Eye" },
-      { label: "NABH Certified Eye Centre", icon: "ShieldCheck" },
-      { label: "Cashless & EMI Support", icon: "CreditCard" },
+      {
+        label: "Advanced Eye Care Infrastructure",
+        description:
+          "Purpose-built facilities with modern ophthalmic equipment, dedicated consultation areas, and advanced operating theatres.",
+        icon: "Building2",
+      },
+      {
+        label: "Specialized Oculoplasty Expertise",
+        description:
+          "Focused treatment for eyelid disorders, watering eyes, orbital conditions, and aesthetic eye procedures.",
+        icon: "Eye",
+      },
+      {
+        label: "NABH Accredited Eye Centre",
+        description:
+          "Committed to maintaining high standards of patient safety, quality care, and clinical excellence.",
+        icon: "ShieldCheck",
+      },
+      {
+        label: "Cashless & EMI Support",
+        description:
+          "Making quality eye care accessible through convenient payment and insurance support options.",
+        icon: "CreditCard",
+      },
     ],
     images: [
       {
@@ -93,54 +120,56 @@ export const homeContent = {
     ],
   },
   processSteps: {
-    eyebrow: "Our Process Step",
-    title: "Conditions & Treatments We Handle",
+    eyebrow: "Conditions & Treatments",
+    title: "Conditions We Commonly Treat",
     steps: [
       {
         number: "01",
         title: "Eyelid Surgery",
         description:
-          "Treatment for functional and cosmetic eyelid concerns including drooping eyelids and excess eyelid skin.",
+          "Treatment for functional and cosmetic eyelid concerns affecting appearance, comfort, and eye health.",
         image: {
           src: "/assets/droping.jpg",
-          alt: "Ophthalmology clinic eye exam setup",
+          alt: "Treatment for functional and cosmetic eyelid concerns",
         },
       },
       {
         number: "02",
-        title: "Droopy Eyelid Correction",
+        title: "Ptosis (Droopy Eyelid)",
         description:
-          "Specialized procedures designed to improve eyelid position and restore confidence.",
+          "Specialized correction of drooping eyelids that may affect vision, facial symmetry, and confidence.",
         image: {
           src: "/assets/droopy_eylid_correction.jpg",
-          alt: "Oculoplastic micro-surgical ophthalmology procedure",
+          alt: "Specialized correction of drooping eyelids",
         },
       },
       {
         number: "03",
         title: "Under-Eye Bag Correction",
         description:
-          "Aesthetic oculoplasty procedures aimed at reducing puffiness and rejuvenating the eye area.",
+          "Aesthetic oculoplasty procedures designed to improve under-eye puffiness and rejuvenate the eye area.",
         image: {
           src: "/assets/under_bags.jpeg",
-          alt: "Clinical planning marking for under-eye bags cosmetic correction",
+          alt: "Aesthetic oculoplasty procedures for under-eye bags",
         },
       },
       {
         number: "04",
         title: "Watering Eye Treatment",
         description:
-          "Evaluation and treatment for tear drainage disorders and excessive watering.",
+          "Diagnosis and treatment of tear drainage disorders causing excessive watering and discomfort.",
         image: {
           src: "/assets/eye_Lid.jpg",
-          alt: "Vision and pediatric trial frame clinical check",
+          alt: "Diagnosis and treatment of tear drainage disorders",
         },
       },
     ],
   },
   treatmentVideo: {
-    eyebrow: "30+ Years of Experience",
+    eyebrow: "Specialized Care",
     title: "Specialized Treatments for Functional & Aesthetic Eye Care",
+    description:
+      "At Namokar Eye & Oculoplasty Centre, treatment goes beyond vision correction. Our focus is on restoring function, comfort, appearance, and confidence through specialized eye care solutions.",
     media: {
       src: "/assets/Home/why-choice-hospital.png",
       alt: "Namokar Eye and Oculoplasty Centre exterior",
@@ -164,36 +193,37 @@ export const homeContent = {
     cards: [
       {
         variant: "primary",
-        icon: "eye",
-        title: "Oculoplasty\nExpertise",
+        icon: "history",
+        title: "International Training & Expertise",
         description:
-          "Focused care for eyelid, orbital and lacrimal conditions.",
+          "Dr. Poonam Jain has undergone advanced training in aesthetic oculoplasty and international observerships, bringing specialized expertise to every patient consultation.",
       },
       {
         variant: "secondary",
         icon: "microscope",
-        title: "NABH Certified Eye Centre in North Delhi",
+        title: "NABH Certified Eye Centre",
         description:
-          "Quality-driven eye care standards.",
+          "Maintaining high standards of safety, hygiene, and patient care across every stage of treatment.",
       },
       {
         variant: "secondary",
         icon: "stethoscope",
-        title: "Doctor - Led \n Specialized Care",
+        title: "Doctor-Led Personalized Care",
         description:
-          "Personalized treatment planning by experienced specialists.",
+          "Every patient receives a treatment plan tailored to their condition, expectations, and long-term eye health goals.",
       },
       {
         variant: "primary",
-        icon: "history",
-        title: "International\nTraining",
-        description: "Barcelona Fellowship & Johns Hopkins Observership.",
+        icon: "eye",
+        title: "Comprehensive Eye Services",
+        description:
+          "From cataract surgery to reconstructive and aesthetic oculoplasty, patients benefit from integrated eye care under one roof.",
       },
     ],
   },
   stats: {
-    eyebrow: "Process",
-    title: ["Our hospital providing", "specialized treatment."],
+    eyebrow: "Our Journey of Care & Trust",
+    title: ["Our Journey of Care & Trust"],
     background: {
       src: "/assets/Home/stats-map.png",
       alt: "",
@@ -207,6 +237,19 @@ export const homeContent = {
       height: 58,
     },
     items: [
+      {
+        value: "25+",
+        countTo: 25,
+        durationMs: 1350,
+        valueSuffix: "+",
+        label: "Experience in Eye Care",
+        icon: {
+          src: "/assets/Home/stats-years-served.png",
+          alt: "",
+          width: 60,
+          height: 60,
+        },
+      },
       {
         value: "4.9",
         countTo: 4.9,
@@ -223,24 +266,11 @@ export const homeContent = {
         },
       },
       {
-        value: "30+",
-        countTo: 30,
-        durationMs: 1350,
-        valueSuffix: "+",
-        label: "Years Served",
-        icon: {
-          src: "/assets/Home/stats-years-served.png",
-          alt: "",
-          width: 60,
-          height: 60,
-        },
-      },
-      {
         value: "299+",
         countTo: 299,
         durationMs: 1500,
         valueSuffix: "+",
-        label: "Google Reviews",
+        label: "Verified Patient Reviews",
         icon: {
           src: "/assets/Home/stats-expert-doctors.png",
           alt: "",
@@ -249,21 +279,22 @@ export const homeContent = {
         },
       },
       {
-        label: "NABH\nCertified Centre",
-        variant: "badge",
+        value: "00,000+",
+        label: "Successful Procedures",
         icon: {
-          src: "/assets/Footer/Patient_saftey_logo.png",
+          src: "/assets/Home/stats-happy-patients.png",
           alt: "",
-          width: 500,
-          height: 273,
-          className: "badgeIcon",
+          width: 60,
+          height: 60,
         },
       },
     ],
   },
   doctorsAppointment: {
-    eyebrow: "Doctors",
-    title: "Meet Our Experienced Doctor",
+    eyebrow: "Meet Our Specialists",
+    title: "Experienced Eye Care Professionals",
+    description:
+      "Our team of experienced ophthalmologists and specialists is committed to providing ethical, evidence-based, and patient-centered eye care.",
     allDoctors: {
       label: "See All Doctors",
       href: "/doctors",
@@ -273,7 +304,7 @@ export const homeContent = {
         name: "Dr. Poonam Jain",
         designation: [
           "Medical Director & Senior Ophthalmologist",
-          "Oculoplasty Specialist",
+          "Specialized expertise in Oculoplasty, Aesthetic Oculoplasty, Cataract Surgery, and Comprehensive Eye Care.",
         ],
         image: {
           src: "/assets/Doctors/Main_doctor.png",
@@ -282,6 +313,8 @@ export const homeContent = {
           height: 1200,
         },
       },
+      /*
+      // Other doctors can be added after confirmation:
       {
         name: "Dr. Ankur Gupta",
         designation: "Sr. consultant",
@@ -302,6 +335,7 @@ export const homeContent = {
           height: 1200,
         },
       },
+      */
     ],
     appointment: {
       title: "Book An Appointment",

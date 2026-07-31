@@ -2,10 +2,14 @@
 
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
+import { aestheticOculofacialContent } from "@/constant/aestheticOculofacialContent";
 import RevealOnView from "@/common/RevealOnView";
 import styles from "./styles.module.css";
 
 export default function AestheticCta() {
+  const { title, description, btnLabel, href } =
+    aestheticOculofacialContent.ctaSection;
+
   return (
     <section className={styles.section} aria-labelledby="aesthetic-cta-title">
       <div className={styles.container}>
@@ -13,15 +17,13 @@ export default function AestheticCta() {
           <div className={styles.ctaBox}>
             <div className={styles.content}>
               <h2 id="aesthetic-cta-title" className={styles.title}>
-                Want Your Eyes to Look More Refreshed Without Losing Natural Expression?
+                {title}
               </h2>
-              <p className={styles.description}>
-                Book a consultation to understand the right aesthetic oculoplasty option for your concern.
-              </p>
+              <p className={styles.description}>{description}</p>
 
-              <Link href="/appointment" className={styles.ctaBtn}>
+              <Link href={href} className={styles.ctaBtn}>
                 <Calendar size={20} strokeWidth={2} />
-                <span>Book Aesthetic Oculoplasty Consultation</span>
+                <span>{btnLabel}</span>
                 <ArrowRight size={18} strokeWidth={2.2} />
               </Link>
             </div>

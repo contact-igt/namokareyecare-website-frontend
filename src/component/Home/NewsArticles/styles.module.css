@@ -69,6 +69,16 @@
   letter-spacing: -0.5px;
 }
 
+.description {
+  max-width: 720px;
+  margin: 16px auto 0;
+  font-family: var(--font-satoshi), sans-serif;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
