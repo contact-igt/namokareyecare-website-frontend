@@ -4,7 +4,8 @@ import {
   ExpectedApproach,
   BeforeAfterOculoplasty,
   SpecialistLedApproach,
-} from "@/component/aesthetic-oculofacial";
+  AestheticOculoplastyTreatments,
+} from "@/component/Aesthetic";
 
 export default function AestheticOculofacialPage() {
   return (
@@ -14,6 +15,7 @@ export default function AestheticOculofacialPage() {
       <ExpectedApproach />
       <BeforeAfterOculoplasty />
       <SpecialistLedApproach />
+      <AestheticOculoplastyTreatments />
     </main>
   );
 }

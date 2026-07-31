@@ -1,14 +1,14 @@
 .section {
   width: 100%;
   padding: 85px 0 95px;
-  background: #ffffff;
+  background-color: #16253d;
+  /* Dark navy blue background from Figma */
   overflow: hidden;
 }
 
 .container {
-  width: min(100%, var(--site-width, 1320px));
+  width: min(100% - 48px, 1150px);
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 .header {
@@ -19,7 +19,8 @@
 .title {
   margin: 0 0 16px;
   font-family: var(--font-satoshi, "Satoshi", sans-serif);
-  color: var(--color-navy, #1b4281);
+  color: #ffffff;
+  /* White text from Figma */
   font-size: 40px;
   font-weight: 800;
   line-height: 1.2;
@@ -30,7 +31,8 @@
   margin: 0 auto;
   max-width: 760px;
   font-family: var(--font-primary, "Inter", sans-serif);
-  color: #64748b;
+  color: #94a3b8;
+  /* Lighter grey/blue text from Figma */
   font-size: 17px;
   line-height: 1.65;
 }
@@ -47,8 +49,8 @@
   height: 280px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(27, 66, 129, 0.06);
-  border: 1px solid #f1f5f9;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .image {
@@ -59,7 +61,7 @@
 }
 
 .imageCard:hover .image {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 @media (max-width: 1024px) {
@@ -69,12 +71,21 @@
 }
 
 @media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .title {
     font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
   }
 
   .imageCard {

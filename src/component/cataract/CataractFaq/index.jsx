@@ -36,12 +36,11 @@ export default function CataractFaq() {
                     aria-expanded={isOpen}
                   >
                     <span className={styles.questionText}>{item.question}</span>
-                    <div className={styles.iconCircle}>
-                      <ChevronDown
-                        size={20}
-                        className={`${styles.chevron} ${isOpen ? styles.chevronRotated : ""}`}
-                      />
-                    </div>
+                    <ChevronDown
+                      size={20}
+                      className={`${styles.chevron} ${isOpen ? styles.chevronRotated : ""}`}
+                    />
+
                   </button>
 
                   {isOpen && (

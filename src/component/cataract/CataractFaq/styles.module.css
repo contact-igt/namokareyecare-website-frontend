@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   padding: 85px 0 95px;
-  background: var(--color-hero-bg, #f4f8fc);
+  background-color: #EFF6FF;
   overflow: hidden;
 }
 
@@ -30,17 +30,18 @@
 
 .faqItem {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 12px; /* Smoothed corner radius */
   border: 1px solid #e2e8f0;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(27, 66, 129, 0.03);
+  box-shadow: 0 4px 16px rgba(27, 66, 129, 0.02);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .faqItem.open {
-  border-color: #93c5fd;
-  box-shadow: 0 8px 24px rgba(27, 66, 129, 0.08);
+  border-color: #cbd5e1; /* Subtle border on active */
+  box-shadow: 0 6px 18px rgba(27, 66, 129, 0.04);
 }
+
 
 .questionBtn {
   width: 100%;
@@ -57,33 +58,18 @@
 
 .questionText {
   font-family: var(--font-satoshi, "Satoshi", sans-serif);
-  color: var(--color-navy, #1b4281);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.iconCircle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #f1f5f9;
-  color: var(--color-navy, #1b4281);
-  flex-shrink: 0;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.open .iconCircle {
-  background: var(--color-orange, #ed7612);
-  color: #ffffff;
+  color: #1e293b; /* Dark text color from Figma */
+  font-size: 16px; /* Optimized size */
+  font-weight: 500; /* Regular/Medium weight from Figma */
+  line-height: 1.4;
 }
 
 .chevron {
+  color: #64748b; /* Slate grey chevron */
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
+
 
 .chevronRotated {
   transform: rotate(180deg);

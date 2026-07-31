@@ -1,11 +1,9 @@
 export const homeContent = {
   banner: {
-    eyebrow: "Precision - Compassion - Technology",
+    eyebrow: "Expertise Your Eyes Deserve",
     title: [
-      "Restore",
-      "Confidence",
-      "with Advanced",
-      "Oculoplasty Care",
+      "Complete Eye Care",
+      "for your Family",
     ],
     description:
       "At Namokar Eye & Oculoplasty Centre, every treatment plan is designed around your individual needs, helping you achieve better vision, improved comfort, and renewed confidence.",
@@ -13,6 +11,7 @@ export const homeContent = {
       label: "Book Appointment Now",
       href: "/appointment",
     },
+
     image: {
       src: "/assets/Home/home_page_doctor.png.png",
       alt: "Doctor consulting a patient and child",

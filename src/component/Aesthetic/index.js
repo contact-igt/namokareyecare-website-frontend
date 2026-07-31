@@ -3,3 +3,4 @@ export { default as WhatIsAestheticOculoplasty } from "./WhatIsAestheticOculopla
 export { default as ExpectedApproach } from "./ExpectedApproach";
 export { default as BeforeAfterOculoplasty } from "./BeforeAfterOculoplasty";
 export { default as SpecialistLedApproach } from "./SpecialistLedApproach";
+export { default as AestheticOculoplastyTreatments } from "./AestheticOculoplastyTreatments";
