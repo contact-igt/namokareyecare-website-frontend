@@ -1,0 +1,335 @@
+.section {
+  width: 100%;
+  padding: 85px 0 95px;
+  background: var(--color-hero-bg, #f4f8fc);
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, var(--site-width, 1320px));
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.headerText {
+  max-width: 780px;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-navy, #1b4281);
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header Nav Controls */
+.headerNavControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: var(--color-navy, #1b4281);
+  box-shadow: 0 4px 12px rgba(27, 66, 129, 0.05);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: var(--color-navy, #1b4281);
+  color: #ffffff;
+  border-color: var(--color-navy, #1b4281);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(27, 66, 129, 0.18);
+}
+
+.navBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Carousel Track */
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.sliderTrackContainer {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 4px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.sliderTrackContainer::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+.sliderTrack {
+  display: flex;
+  width: 100%;
+}
+
+.cardCol {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 28px 24px 22px;
+  box-shadow: 0 10px 30px rgba(27, 66, 129, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(27, 66, 129, 0.09);
+  border-color: #cbd5e1;
+}
+
+.cardTitle {
+  margin: 0 0 20px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: #1e293b;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Image Pair Row */
+.imagePairRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.imgBox {
+  position: relative;
+  flex: 1;
+  height: 175px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  z-index: 2;
+}
+
+.beforeBadge {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.afterBadge {
+  background: #16a34a;
+}
+
+.arrowCircle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0284c7;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.4);
+}
+
+.cardDescription {
+  margin: 0 0 18px;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.cardFooter {
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.disclaimerText {
+  margin: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #94a3b8;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Pagination Dots */
+.paginationDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  width: 24px;
+  background: var(--color-orange, #ed7612);
+}
+
+/* CTA */
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.galleryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  border-radius: 999px;
+  border: 2px solid #38bdf8;
+  background: #ffffff;
+  color: #0284c7;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.12);
+}
+
+.galleryBtn:hover {
+  background: #f0f9ff;
+  border-color: #0284c7;
+  color: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.18);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerNavControls {
+    align-self: flex-end;
+  }
+
+  .cardCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 55px 0;
+  }
+
+  .cardCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .imgBox {
+    height: 150px;
+  }
+
+  .card {
+    padding: 22px 18px 18px;
+  }
+}
