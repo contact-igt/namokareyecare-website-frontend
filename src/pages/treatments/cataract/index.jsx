@@ -1,5 +1,5 @@
 import CataractPage from "@/pagecomponent/cataract";
 
-export default function StitchlessCataractSurgeryPage() {
+export default function CataractTreatmentPage() {
   return <CataractPage />;
 }

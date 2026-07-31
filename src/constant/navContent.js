@@ -14,7 +14,14 @@ export const headerContent = {
   navItems: [
     { label: "Home", href: "/" },
     { label: "Doctors", href: "/doctors" },
-    { label: "Services", href: "/services" },
+    {
+      label: "Treatments",
+      href: "/treatments",
+      dropdown: [
+        { label: "Cataract", href: "/treatments/cataract" },
+        { label: "Aesthetic Oculofacial", href: "/treatments/aesthetic-oculofacial" },
+      ],
+    },
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],

@@ -21,43 +21,43 @@ export const homeContent = {
     },
   },
   services: {
-    eyebrow: "Our Specialized Services",
-    title: "Our Services",
+    eyebrow: "Our Specialized Treatments",
+    title: "Our Treatments",
     items: [
       {
-        title: "Stitchless Cataract Surgery",
-        href: "/services/stitchless-cataract-surgery",
+        title: "Cataract Treatment",
+        href: "/treatments/cataract-treatment",
         icon: "cataract",
       },
       {
         title: "Eyelid Surgery",
-        href: "/services/eyelid-surgery",
+        href: "/treatments/eyelid-surgery",
         icon: "eyelid",
       },
       {
         title: "Glaucoma Management",
-        href: "/services/glaucoma-management",
+        href: "/treatments/glaucoma-management",
         icon: "glaucoma",
       },
       {
         title: "Aesthetic Oculofacial",
-        href: "/services/aesthetic-oculofacial",
+        href: "/treatments/aesthetic-oculofacial",
         icon: "aesthetic",
       },
       {
         title: "Reconstructive Oculoplasty",
-        href: "/services/eye-plastic-reconstructive",
+        href: "/treatments/eye-plastic-reconstructive",
         icon: "reconstructive",
       },
       {
         title: "Comprehensive Eye Exams",
-        href: "/services/comprehensive-eye-exams",
+        href: "/treatments/comprehensive-eye-exams",
         icon: "exams",
       },
     ],
     cta: {
-      label: "View All Services",
-      href: "/services",
+      label: "View All Treatments",
+      href: "/treatments",
     },
   },
   whyChoose: {
