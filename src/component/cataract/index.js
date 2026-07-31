@@ -3,3 +3,8 @@ export { default as CataractEvaluationSigns } from "./CataractEvaluationSigns";
 export { default as CataractLensOptions } from "./CataractLensOptions";
 export { default as StitchlessCataractSurgery } from "./StitchlessCataractSurgery";
 export { default as WhyChooseNamokar } from "./WhyChooseNamokar";
+export { default as CataractTreatmentExpectations } from "./CataractTreatmentExpectations";
+export { default as ChooseVision } from "./ChooseVision";
+export { default as ModernTech } from "./ModernTech";
+export { default as CataractFaq } from "./CataractFaq";
+export { default as CataractCta } from "./CataractCta";

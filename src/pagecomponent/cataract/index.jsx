@@ -1,8 +1,15 @@
-import WhatIsCataract from "@/component/cataract/what is cataract";
-import CataractEvaluationSigns from "@/component/cataract/CataractEvaluationSigns";
-import CataractLensOptions from "@/component/cataract/CataractLensOptions";
-import StitchlessCataractSurgery from "@/component/cataract/StitchlessCataractSurgery";
-import WhyChooseNamokar from "@/component/cataract/WhyChooseNamokar";
+import {
+  WhatIsCataract,
+  CataractEvaluationSigns,
+  CataractLensOptions,
+  StitchlessCataractSurgery,
+  WhyChooseNamokar,
+  CataractTreatmentExpectations,
+  ChooseVision,
+  ModernTech,
+  CataractFaq,
+  CataractCta,
+} from "@/component/cataract";
 
 export default function CataractPage() {
   return (
@@ -12,6 +19,11 @@ export default function CataractPage() {
       <CataractLensOptions />
       <StitchlessCataractSurgery />
       <WhyChooseNamokar />
+      <CataractTreatmentExpectations />
+      <ChooseVision />
+      <ModernTech />
+      <CataractFaq />
+      <CataractCta />
     </main>
   );
 }

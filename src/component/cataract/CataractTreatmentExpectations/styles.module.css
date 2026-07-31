@@ -1,0 +1,192 @@
+.section {
+  width: 100%;
+  padding: 85px 0 95px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, var(--site-width, 1320px));
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  margin: 0 0 64px;
+  text-align: center;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-navy, #1b4281);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+}
+
+.timelineWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.connectingLine {
+  position: absolute;
+  top: 26px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: #dbeafe;
+  z-index: 1;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.stepCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stepCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #0284c7;
+  color: #ffffff;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.28);
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stepCol:hover .stepCircle {
+  transform: scale(1.1);
+  background: var(--color-orange, #ed7612);
+  box-shadow: 0 8px 22px rgba(237, 118, 18, 0.3);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.stepTitle {
+  margin: 0;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-navy, #1b4281);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.stepSubtitle {
+  margin: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.noteBox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 28px;
+  background: #f0f7ff;
+  border-radius: 16px;
+  border: 1px solid #e0f0fe;
+  position: relative;
+  overflow: hidden;
+}
+
+.noteAccentBar {
+  display: inline-block;
+  flex: 0 0 4px;
+  width: 4px;
+  height: 28px;
+  background: #0284c7;
+  border-radius: 4px;
+}
+
+.noteText {
+  margin: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.noteText strong {
+  color: var(--color-navy, #1b4281);
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .connectingLine {
+    display: none;
+  }
+
+  .title {
+    font-size: 34px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 55px 0 65px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .stepCol {
+    flex-direction: row;
+    text-align: left;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .stepCircle {
+    margin-bottom: 0;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .noteBox {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  .noteText {
+    font-size: 14px;
+  }
+}
