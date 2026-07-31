@@ -25,8 +25,8 @@ export const homeContent = {
     title: "Our Treatments",
     items: [
       {
-        title: "Cataract Treatment",
-        href: "/treatments/cataract-treatment",
+        title: "Stitchless Cataract Surgery",
+        href: "/treatments/cataract",
         icon: "cataract",
       },
       {
