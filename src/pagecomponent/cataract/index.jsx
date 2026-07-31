@@ -1,4 +1,5 @@
 import {
+  CataractBanner,
   WhatIsCataract,
   CataractEvaluationSigns,
   CataractLensOptions,
@@ -14,6 +15,7 @@ import {
 export default function CataractPage() {
   return (
     <main>
+      <CataractBanner />
       <WhatIsCataract />
       <CataractEvaluationSigns />
       <CataractLensOptions />

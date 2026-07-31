@@ -8,3 +8,4 @@ export { default as ChooseVision } from "./ChooseVision";
 export { default as ModernTech } from "./ModernTech";
 export { default as CataractFaq } from "./CataractFaq";
 export { default as CataractCta } from "./CataractCta";
+export { default as CataractBanner } from "./CataractBanner";

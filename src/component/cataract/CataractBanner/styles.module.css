@@ -1,0 +1,277 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: var(--hero-height);
+  display: flex;
+  align-items: center;
+  background-color: #f7f0e7;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/cataract/cataract.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  z-index: 0;
+}
+
+
+.nabhLogoWrapper {
+  position: absolute;
+  top: 32px;
+  right: 56px;
+  z-index: 10;
+}
+
+.nabhLogo {
+  height: auto;
+  width: 110px;
+  object-fit: contain;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 56px), 1440px);
+  margin: 0 auto;
+  padding: 80px 0 160px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.copy {
+  max-width: 680px;
+  padding-top: 4px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  font-family: var(--font-satoshi);
+  color: var(--color-coral);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 120px;
+  height: 2px;
+  background: var(--color-coral);
+}
+
+.title {
+  max-width: 680px;
+  margin: 0;
+  font-family: var(--font-satoshi);
+  color: #711f1c; /* Exact dark maroon red from Figma */
+  font-size: clamp(48px, 4.4vw, 68px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.titleLine {
+  display: block;
+}
+
+.titleLine + .titleLine {
+  margin-top: 10px;
+}
+
+.description {
+  max-width: 620px;
+  margin: 30px 0 0;
+  font-family: var(--font-satoshi);
+  color: #4a4a4a;
+  font-size: clamp(17px, 1.15vw, 19px);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  min-height: 54px;
+  margin-top: 40px;
+  padding: 0 32px;
+  border-radius: 999px;
+  background: #1a73e8; /* Figma-like blue CTA */
+  font-family: var(--font-satoshi);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.25);
+}
+
+.cta:hover {
+  background: #155cb8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 115, 232, 0.35);
+}
+
+/* Floating info bar styles */
+.bottomInfoBarWrapper {
+  position: absolute;
+  bottom: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 56px), 1440px);
+  z-index: 2;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.bottomInfoBar {
+  background: #ffffff;
+  border-left: 6px solid #00a8e8; /* Cyan/blue left indicator border */
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 40px;
+  backdrop-filter: blur(10px);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  color: #00a8e8;
+  flex-shrink: 0;
+}
+
+.infoText {
+  font-family: var(--font-satoshi);
+  color: #2b3a4a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .heroInner {
+    padding: 60px 0 180px;
+  }
+
+  .bottomInfoBarWrapper {
+    justify-content: center;
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .bottomInfoBar {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero::before {
+    background-image: url("/assets/cataract/cataractmb.png");
+    background-position: center center;
+  }
+
+  .nabhLogoWrapper {
+    top: 24px;
+    right: 24px;
+  }
+
+  .nabhLogo {
+    width: 80px;
+  }
+
+  .heroInner {
+    padding: 80px 20px 180px;
+    width: 100%;
+  }
+
+  .bottomInfoBarWrapper {
+    bottom: -50px;
+  }
+
+  .bottomInfoBar {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 700px;
+    align-items: flex-start;
+  }
+
+  .hero::before {
+    background-image: url("/assets/cataract/cataractmb.png");
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .heroInner {
+    padding: 80px 16px 180px;
+  }
+
+  .title {
+    font-size: clamp(32px, 7.5vw, 42px);
+    line-height: 1.1;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  .cta {
+    width: 100%;
+    margin-top: 24px;
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .bottomInfoBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .infoItem {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .infoText {
+    font-size: 13px;
+  }
+}
+
