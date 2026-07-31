@@ -1,0 +1,145 @@
+.whatIsCataract {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: min(100%, var(--site-width));
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.copyColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-satoshi);
+  color: var(--color-coral);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-coral);
+}
+
+.title {
+  margin: 0 0 24px;
+  font-family: var(--font-satoshi);
+  color: var(--color-navy);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.description {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: #4a5568;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #168eff;
+  font-family: var(--font-satoshi);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ctaLink:hover {
+  color: var(--color-navy);
+}
+
+.ctaLink svg {
+  transition: transform 0.2s ease;
+}
+
+.ctaLink:hover svg {
+  transform: translateX(5px);
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(27, 66, 129, 0.08);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .whatIsCataract {
+    padding: 48px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
