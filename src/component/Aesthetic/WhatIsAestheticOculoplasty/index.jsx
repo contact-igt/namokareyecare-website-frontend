@@ -1,13 +1,60 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { ShieldCheck } from "lucide-react";
 import { aestheticOculofacialContent } from "@/constant/aestheticOculofacialContent";
 import RevealOnView from "@/common/RevealOnView";
 import styles from "./styles.module.css";
 
+function AnimatedStat({ stat, active }) {
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!active) return;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) {
+      setDisplay(stat.countTo);
+      return;
+    }
+    const duration = stat.durationMs ?? 1400;
+    const start = performance.now();
+    let frameId = 0;
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(stat.countTo * eased);
+      if (progress < 1) frameId = window.requestAnimationFrame(tick);
+    };
+    frameId = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frameId);
+  }, [active, stat]);
+
+  const raw = display.toFixed(stat.decimals ?? 0);
+  const formatted = stat.formatThousands
+    ? Number(raw).toLocaleString("en-IN")
+    : raw;
+
+  return (
+    <strong className={styles.statValue}>
+      {stat.prefix}
+      {formatted}
+      <span
+        className={`${styles.statSuffix} ${
+          stat.isStar ? styles.statStar : ""
+        }`}
+      >
+        {stat.suffix}
+      </span>
+    </strong>
+  );
+}
+
 export default function WhatIsAestheticOculoplasty() {
-  const { whatIsOculoplasty } = aestheticOculofacialContent;
+  const { whatIsOculoplasty, banner } = aestheticOculofacialContent;
+  const { stats } = banner;
   const {
     eyebrow,
     titleLine1,
@@ -19,8 +66,42 @@ export default function WhatIsAestheticOculoplasty() {
     insetImage,
   } = whatIsOculoplasty;
 
+  const statsRef = useRef(null);
+  const [statsActive, setStatsActive] = useState(false);
+
+  useEffect(() => {
+    const node = statsRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsActive(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className={styles.section} aria-labelledby="what-is-oculoplasty-title">
+      {/* Stats Bar */}
+      <div className={styles.statsBarWrapper} ref={statsRef}>
+        <div className={styles.statsBar}>
+          {stats.map((stat, i) => (
+            <div className={styles.statItem} key={stat.label}>
+              <AnimatedStat stat={stat} active={statsActive} />
+              <span className={styles.statLabel}>{stat.label}</span>
+              {i < stats.length - 1 && (
+                <span className={styles.statDivider} aria-hidden="true" />
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className={styles.container}>
         <div className={styles.topGrid}>
           {/* Left Text Content */}

@@ -20,7 +20,7 @@
   font-family: var(--font-satoshi, "Satoshi", sans-serif);
   color: var(--color-navy, #1b4281);
   font-size: clamp(32px, 3.5vw, 44px);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 

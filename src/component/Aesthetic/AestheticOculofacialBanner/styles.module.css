@@ -299,8 +299,8 @@
 
 @media (max-width: 768px) {
   .bannerSection {
-    min-height: 700px;
-    align-items: flex-start;
+    min-height: 650px;
+    align-items: center;
   }
 
   .desktopBg {
@@ -323,7 +323,11 @@
   }
 
   .contentContainer {
-    padding: 80px 16px 230px;
+    padding: 80px 16px;
+  }
+
+  .line {
+    width: 40px;
   }
 
   .title {
@@ -333,12 +337,14 @@
 
   .description {
     font-size: 15px;
-    margin-bottom: 24px;
+    margin: 16px 0 0;
+    line-height: 1.5;
   }
 
   .ctaGroup {
     flex-direction: column;
     align-items: stretch;
+    margin-top: 28px;
     gap: 12px;
   }
 
@@ -349,19 +355,7 @@
     font-size: 15px;
   }
 
-  .statsBar {
-    flex-wrap: wrap;
-    border-radius: 12px;
-  }
-
-  .statItem {
-    flex: 1 1 50%;
-    min-width: 0;
-    padding: 22px 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .statDivider {
+  .statsBarWrapper {
     display: none;
   }
 }

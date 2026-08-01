@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -9,10 +11,65 @@ import {
   HandHeart,
   ScanEye,
   Stethoscope,
+  Award,
+  Users,
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { homeContent } from "@/constant/homeContent";
 import styles from "./styles.module.css";
 
+/* ── Inline animated number counter (same pattern as Cataract / Aesthetic) ── */
+function AnimatedStat({ countTo, suffix = "", durationMs = 1400 }) {
+  const [display, setDisplay] = useState(0);
+  const [active, setActive] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!active) return;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) {
+      setDisplay(countTo);
+      return;
+    }
+    const start = performance.now();
+    let frameId = 0;
+    const tick = (now) => {
+      const progress = Math.min((now - start) / durationMs, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(countTo * eased));
+      if (progress < 1) frameId = window.requestAnimationFrame(tick);
+    };
+    frameId = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frameId);
+  }, [active, countTo, durationMs]);
+
+  return (
+    <span className={styles.statsNumber} ref={ref}>
+      {display.toLocaleString("en-IN")}
+      {suffix}
+    </span>
+  );
+}
+
+/* ── Service icon helper ── */
 const serviceIcons = {
   cataract: [Eye, CirclePlus],
   eyelid: [Bone, BadgePlus],
@@ -38,6 +95,33 @@ export default function Services() {
 
   return (
     <section className={styles.services} aria-labelledby="home-services-title">
+      {/* Stats Card at the top (mobile view only) */}
+      <div className={styles.statsCardWrapper}>
+        <div className={styles.statsCard}>
+          <div className={styles.statsItem}>
+            <div className={styles.iconCircle}>
+              <Award className={styles.statsIcon} size={22} />
+            </div>
+            <div className={styles.statsContent}>
+              <AnimatedStat countTo={25} suffix="+" durationMs={1200} />
+              <span className={styles.statsLabel}>Years Excellence</span>
+            </div>
+          </div>
+
+          <div className={styles.statsDivider} aria-hidden="true" />
+
+          <div className={styles.statsItem}>
+            <div className={styles.iconCircle}>
+              <Users className={styles.statsIcon} size={22} />
+            </div>
+            <div className={styles.statsContent}>
+              <AnimatedStat countTo={50000} suffix="+" durationMs={1600} />
+              <span className={styles.statsLabel}>Happy Patients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className={styles.inner}>
         <div className={styles.eyebrow}>
           <span className={styles.eyebrowLine} aria-hidden="true" />

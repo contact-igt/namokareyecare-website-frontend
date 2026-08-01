@@ -1,7 +1,7 @@
 .whatIsCataract {
   position: relative;
   width: 100%;
-  padding: 80px 0;
+  padding: 110px 0 80px;
   background: #ffffff;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
   align-items: center;
   width: min(100%, var(--site-width));
   margin: 0 auto;
-  padding: 60px 25px;
+  padding: 50px 25px;
 }
 
 .copyColumn {
@@ -46,7 +46,7 @@
   font-family: var(--font-satoshi);
   color: var(--color-navy);
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
@@ -119,6 +119,10 @@
   transform: scale(1.02);
 }
 
+.statsBarWrapper {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;
@@ -130,9 +134,90 @@
   }
 }
 
+@media (max-width: 767px) {
+  .statsBarWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .statsBar {
+    width: 100%;
+    background: #ffffff;
+    border-top: 4px solid var(--color-navy);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .statItem {
+    position: relative;
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 16px;
+    gap: 6px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .statItem:nth-child(1),
+  .statItem:nth-child(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .statDivider {
+    display: none;
+  }
+
+  .statValue {
+    display: block;
+    font-family: var(--font-satoshi);
+    color: var(--color-navy);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .statSuffix {
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--color-navy);
+    font-size: 0.75em;
+    vertical-align: super;
+    font-weight: 700;
+  }
+
+  .statStar {
+    color: #f5a623;
+    font-size: 0.85em;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  .statLabel {
+    display: block;
+    font-family: var(--font-satoshi);
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.1px;
+  }
+}
+
 @media (max-width: 640px) {
   .whatIsCataract {
-    padding: 48px 0;
+    padding: 48px 0 48px;
   }
 
   .title {
@@ -141,5 +226,11 @@
 
   .description {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .statItem {
+    flex: 1 1 100%;
   }
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Award, Users } from "lucide-react";
+import { ArrowRight, Award, Users, Phone } from "lucide-react";
 import { homeContent } from "@/constant/homeContent";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import styles from "./styles.module.css";
@@ -48,10 +48,16 @@ export default function Banner() {
           </RevealOnView>
 
           <RevealOnView variant="fadeUp" delay={480}>
-            <Link href={cta.href} className={styles.cta}>
-              {cta.label}
-              <ArrowRight size={20} strokeWidth={2.2} aria-hidden="true" />
-            </Link>
+            <div className={styles.ctaGroup}>
+              <Link href={cta.href} className={styles.cta}>
+                {cta.label}
+                <ArrowRight size={18} strokeWidth={2.2} aria-hidden="true" />
+              </Link>
+              <a href="tel:+919876543210" className={styles.ctaSecondary}>
+                <Phone size={17} strokeWidth={2.2} aria-hidden="true" />
+                Call Us Now
+              </a>
+            </div>
           </RevealOnView>
         </div>
       </div>

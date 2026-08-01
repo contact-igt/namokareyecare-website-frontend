@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 54px;
+  gap: 32px;
   width: min(calc(100% - 56px), 1468px);
   height: 100%;
   margin: 0 auto;
@@ -30,7 +30,7 @@
 
 .logo {
   display: block;
-  width: clamp(252px, 14.5vw, 296px);
+  width: clamp(230px, 13vw, 260px);
   height: auto;
   flex: 0 1 auto;
 }
@@ -39,16 +39,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 46px;
+  gap: 32px;
 }
 
 .navLink {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-satoshi);
   color: var(--color-navy);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
@@ -95,7 +95,7 @@
   padding: 12px 18px;
   color: var(--color-navy);
   font-family: var(--font-satoshi);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   border-radius: 8px;
@@ -133,7 +133,7 @@
   min-height: 56px;
   padding: 0 30px;
   gap: 12px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .menuButton {
@@ -166,11 +166,11 @@
   }
 
   .nav {
-    gap: 24px;
+    gap: 20px;
   }
 
   .navLink {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .logo {
@@ -180,7 +180,7 @@
   .appointment {
     min-width: 196px;
     min-height: 52px;
-    font-size: 17px;
+    font-size: 14px;
   }
 }
 

@@ -71,11 +71,11 @@ export const aestheticOculofacialContent = {
       { id: 4, label: "Age-related Changes" },
     ],
     mainImage: {
-      src: "/assets/aesthetic/whatis_oculoplasty.png",
+      src: "/assets/Aesthetic/whatis_oculoplasty.png",
       alt: "Aesthetic Oculoplasty Examination",
     },
     insetImage: {
-      src: "/assets/aesthetic/oculoplasty_consultation1.png",
+      src: "/assets/Aesthetic/oculoplasty_consultation1.png",
       alt: "Doctor Consultation",
     },
   },
@@ -135,7 +135,7 @@ export const aestheticOculofacialContent = {
     subtitle:
       "We follow a patient-first approach to ensure safe treatments, natural results and complete satisfaction.",
     image: {
-      src: "/assets/aesthetic/expected_approach_doctor.png",
+      src: "/assets/Aesthetic/expected_approach_doctor.JPG",
       alt: "Specialist examining patient eyelids",
     },
     banner: {
@@ -236,8 +236,8 @@ export const aestheticOculofacialContent = {
       {
         id: "blepharoplasty",
         title: "Upper Eyelid Blepharoplasty",
-        beforeImage: "/assets/aesthetic/before_blepharoplasty.png",
-        afterImage: "/assets/aesthetic/after_blepharoplasty.png",
+        beforeImage: "/assets/Aesthetic/before_blepharoplasty.png",
+        afterImage: "/assets/Aesthetic/after_blepharoplasty.png",
         description:
           "Improved eyelid contour with natural appearance. 6 weeks post-procedure.",
         disclaimer: "Results vary. Images displayed with patient consent.",
@@ -245,8 +245,8 @@ export const aestheticOculofacialContent = {
       {
         id: "thread-lift",
         title: "Thread Lift",
-        beforeImage: "/assets/aesthetic/before_threadlift.png",
-        afterImage: "/assets/aesthetic/after_threadlift.png",
+        beforeImage: "/assets/Aesthetic/before_threadlift.png",
+        afterImage: "/assets/Aesthetic/after_threadlift.png",
         description:
           "Subtle facial lift with minimally invasive approach. 3 months post-treatment.",
         disclaimer: "Results vary. Images displayed with patient consent.",
@@ -254,8 +254,8 @@ export const aestheticOculofacialContent = {
       {
         id: "brow-lift",
         title: "Brow Lift",
-        beforeImage: "/assets/aesthetic/before_browlift.png",
-        afterImage: "/assets/aesthetic/after_browlift.png",
+        beforeImage: "/assets/Aesthetic/before_browlift.png",
+        afterImage: "/assets/Aesthetic/after_browlift.png",
         description:
           "Enhanced brow position creating better eye area balance. 8 weeks post-procedure.",
         disclaimer: "Results vary. Images displayed with patient consent.",

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import "@/style/globals.css";
 import Layout from "@/common/Layout";
 import Preloader from "@/common/Preloader";
@@ -14,6 +15,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+      </Head>
       <Preloader />
       <Layout>
         <div className={ready ? "page-enter" : ""} style={{ visibility: ready ? "visible" : "hidden" }}>

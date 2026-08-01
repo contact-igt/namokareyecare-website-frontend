@@ -16,7 +16,7 @@
   font-family: var(--font-satoshi, "Satoshi", sans-serif);
   color: var(--color-navy, #1b4281);
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.5px;
 }

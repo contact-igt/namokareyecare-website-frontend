@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   background: #ffffff;
-  padding: 60px 0 60px;
+  padding: 100px 0px;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -210,13 +210,16 @@
 }
 
 /* Responsive configurations */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  .testimonialsSection {
+    padding: 100px 0 80px;
+  }
   .inner {
     padding: 0 30px;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .grid {
     grid-template-columns: 1fr;
     max-width: 440px;
@@ -228,9 +231,9 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .testimonialsSection {
-    padding: 80px 0 90px;
+    padding: 60px 0 60px;
   }
   .title {
     font-size: 32px;

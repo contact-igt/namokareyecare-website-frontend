@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  padding: 85px 0 95px;
+  padding: 190px 0 95px;
   background: #ffffff;
   overflow: hidden;
 }
@@ -49,7 +49,7 @@
   margin: 0 0 24px;
   font-family: var(--font-satoshi, "Satoshi", sans-serif);
   font-size: 46px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.6px;
 }
@@ -176,10 +176,25 @@
   background: #0284c7;
 }
 
-.ann1 { top: 26%; left: 32%; }
-.ann2 { top: 38%; left: 28%; }
-.ann3 { top: 50%; left: 36%; }
-.ann4 { top: 62%; left: 30%; }
+.ann1 {
+  top: 26%;
+  left: 32%;
+}
+
+.ann2 {
+  top: 38%;
+  left: 28%;
+}
+
+.ann3 {
+  top: 50%;
+  left: 36%;
+}
+
+.ann4 {
+  top: 62%;
+  left: 30%;
+}
 
 /* Inset Doctor Consultation Photo */
 .insetCircle {
@@ -201,6 +216,10 @@
   object-fit: cover;
 }
 
+.statsBarWrapper {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .topGrid {
     grid-template-columns: 1fr;
@@ -215,9 +234,90 @@
   }
 }
 
+@media (max-width: 768px) {
+  .statsBarWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+
+  .statsBar {
+    width: 100%;
+    background: #ffffff;
+    border-top: 4px solid var(--color-navy, #1b4281);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .statItem {
+    position: relative;
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 16px;
+    gap: 6px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .statItem:nth-child(1),
+  .statItem:nth-child(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .statDivider {
+    display: none;
+  }
+
+  .statValue {
+    display: block;
+    font-family: var(--font-satoshi);
+    color: var(--color-navy, #1b4281);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .statSuffix {
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--color-navy, #1b4281);
+    font-size: 0.75em;
+    vertical-align: super;
+    font-weight: 700;
+  }
+
+  .statStar {
+    color: #f5a623;
+    font-size: 0.85em;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  .statLabel {
+    display: block;
+    font-family: var(--font-satoshi);
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.1px;
+  }
+}
+
 @media (max-width: 640px) {
   .section {
-    padding: 55px 0;
+    padding: 48px 0 55px;
   }
 
   .heading {
@@ -226,5 +326,11 @@
 
   .insetCircle {
     display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .statItem {
+    flex: 1 1 100%;
   }
 }

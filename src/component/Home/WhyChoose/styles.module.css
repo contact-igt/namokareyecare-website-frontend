@@ -3,7 +3,6 @@
   width: 100%;
   height: auto;
   min-height: 660px;
-  padding-bottom: 60px;
   overflow: hidden;
   background: #ffffff;
 }
@@ -17,7 +16,7 @@
   width: var(--site-width);
   height: 100%;
   margin: 0 auto;
-  padding-top: 60px;
+  padding: 60px 0;
 }
 
 .collage {
@@ -198,7 +197,7 @@
   height: 240px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1399px) {
   .inner {
     width: min(100%, calc(var(--site-width) - 40px));
     grid-template-columns: minmax(500px, 612px) 1fr;
@@ -211,7 +210,7 @@
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1199px) {
   .whyChoose {
     height: auto;
     min-height: 659.59px;
@@ -219,8 +218,8 @@
 
   .inner {
     grid-template-columns: 1fr;
-    gap: 34px;
-    padding: 72px 24px 96px;
+    gap: 60px;
+    padding: 70px 24px 80px;
   }
 
   .collage {
@@ -247,9 +246,9 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 767px) {
   .inner {
-    padding: 58px 20px 76px;
+    padding: 60px 20px 60px;
   }
 
   .collage {
@@ -280,16 +279,16 @@
   }
 
   .title {
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .description {
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .listItem {
-    font-size: 18px;
+    font-size: 16px;
   }
 }

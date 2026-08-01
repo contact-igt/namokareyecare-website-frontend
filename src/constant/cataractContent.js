@@ -112,7 +112,7 @@ export const cataractContent = {
       { id: 7, label: "Planned with detailed pre-operative evaluation", icon: "ClipboardList" },
     ],
     image: {
-      src: "/assets/cataract/stitchless_surgery_tech.png",
+      src: "/assets/cataract/stitchless_surgery_tech.JPG",
       alt: "Stitchless Cataract Surgery IOL Technology",
     },
     ctaBanner: {
@@ -170,7 +170,7 @@ export const cataractContent = {
       },
     ],
     image: {
-      src: "/assets/cataract/why_choose_namokar_doctor.png",
+      src: "/assets/cataract/why_choose_namokar_doctor.JPG",
       alt: "Dr. Poonam Jain consulting a patient at Namokar Eye Centre",
     },
     highlights: [

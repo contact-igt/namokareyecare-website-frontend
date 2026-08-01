@@ -41,7 +41,7 @@
   margin: 16px 0 14px;
   font-family: var(--font-satoshi, "Satoshi", sans-serif);
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.8px;
 }

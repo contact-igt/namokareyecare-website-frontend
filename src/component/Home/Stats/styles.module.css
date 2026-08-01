@@ -4,7 +4,7 @@
   min-height: 655px;
   overflow: hidden;
   background: #ffffff;
-  padding: 60px 0 60px;
+  padding: 100px 0px;
 }
 
 .inner {
@@ -217,7 +217,7 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1399px) {
   .stats {
     padding-right: 20px;
     padding-left: 20px;
@@ -237,10 +237,10 @@
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1199px) {
   .stats {
     min-height: auto;
-    padding: 100px 24px 82px;
+    padding: 100px 24px 80px;
   }
 
   .inner {
@@ -279,15 +279,15 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 767px) {
   .stats {
-    padding: 82px 18px 64px;
+    padding: 60px 18px 60px;
   }
 
   .eyebrow {
     gap: 10px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 22px;
   }
 
   .eyebrowLine {
@@ -296,8 +296,8 @@
 
   .title {
     margin-top: 22px;
-    font-size: 34px;
-    line-height: 41px;
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .grid {
@@ -307,8 +307,8 @@
   }
 
   .value {
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 34px;
+    line-height: 42px;
   }
 
   .badgeIcon {
