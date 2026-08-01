@@ -8,12 +8,14 @@ import styles from "./styles.module.css";
 
 function PhotoPanel({ image }) {
   return (
-    <div
-      className={`${styles.photo} ${styles[image.variant]}`}
-      role="img"
-      aria-label={image.alt}
-      style={{ "--photo-src": `url(${image.src})` }}
-    />
+    <div className={`${styles.photo} ${styles[image.variant]}`}>
+      <div
+        className={styles.photoInner}
+        role="img"
+        aria-label={image.alt}
+        style={{ "--photo-src": `url(${image.src})` }}
+      />
+    </div>
   );
 }
 

@@ -83,14 +83,14 @@ export default function AestheticOculofacialBanner() {
     >
       <div className={styles.bgImageWrapper}>
         <Image
-          src="/assets/Aesthetic/aesthatic.png"
+          src="/assets/Aesthetic/aesthatic-new.jpeg"
           alt="Aesthetic Treatment Background"
           fill
           priority
           className={styles.desktopBg}
         />
         <Image
-          src="/assets/Aesthetic/aesthaticmb.png"
+          src="/assets/Aesthetic/aesthaticmb-new.jpeg"
           alt="Aesthetic Treatment Background Mobile"
           fill
           priority

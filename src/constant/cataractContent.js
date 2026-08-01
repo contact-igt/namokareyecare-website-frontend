@@ -11,7 +11,7 @@ export const cataractContent = {
       href: "/about",
     },
     image: {
-      src: "/assets/cataract/what_is_cataract.png",
+      src: "/assets/cataract/what_is_cataract-new.jpeg",
       alt: "Close-up medical view of an eye with cataract",
     },
   },
@@ -47,7 +47,7 @@ export const cataractContent = {
           "Proven reliability",
         ],
         image: {
-          src: "/assets/cataract/monofocal.png",
+          src: "/assets/cataract/monofocal-new.jpeg",
           alt: "Monofocal IOL – Single Focus Intraocular Lens",
         },
         icon: "Eye",
@@ -65,7 +65,7 @@ export const cataractContent = {
           "Enhanced lifestyle",
         ],
         image: {
-          src: "/assets/cataract/multifocal.png",
+          src: "/assets/cataract/multifocal-new.jpeg",
           alt: "Multifocal IOL – Premium Multiple Focus Intraocular Lens",
         },
         icon: "Sparkles",
@@ -83,7 +83,7 @@ export const cataractContent = {
           "Single procedure",
         ],
         image: {
-          src: "/assets/cataract/toric.png",
+          src: "/assets/cataract/toric-new.jpeg",
           alt: "Toric IOL – Astigmatism Correcting Intraocular Lens",
         },
         icon: "Target",
@@ -112,7 +112,7 @@ export const cataractContent = {
       { id: 7, label: "Planned with detailed pre-operative evaluation", icon: "ClipboardList" },
     ],
     image: {
-      src: "/assets/cataract/stitchless_surgery_tech.JPG",
+      src: "/assets/cataract/stitchless_surgery_tech_new.JPG",
       alt: "Stitchless Cataract Surgery IOL Technology",
     },
     ctaBanner: {
@@ -170,7 +170,7 @@ export const cataractContent = {
       },
     ],
     image: {
-      src: "/assets/cataract/why_choose_namokar_doctor.JPG",
+      src: "/assets/cataract/why_choose_namokar_doctor-new.JPG",
       alt: "Dr. Poonam Jain consulting a patient at Namokar Eye Centre",
     },
     highlights: [
@@ -376,15 +376,15 @@ export const cataractContent = {
       "Accurate diagnosis, careful surgical planning and appropriate lens calculation are important parts of cataract care. Our team combines clinical experience with modern examination and surgical systems to deliver carefully planned treatment.",
     images: [
       {
-        src: "/assets/cataract/techs1.png",
+        src: "/assets/cataract/techs1-new.jpeg",
         alt: "Advanced surgical microscope used in cataract surgery",
       },
       {
-        src: "/assets/cataract/techs2.png",
+        src: "/assets/cataract/techs2-new.jpeg",
         alt: "Slit lamp biomicroscope for eye examination",
       },
       {
-        src: "/assets/cataract/techs3.png",
+        src: "/assets/cataract/techs3-new.jpeg",
         alt: "Ophthalmic examination chair and slit lamp setup",
       },
 

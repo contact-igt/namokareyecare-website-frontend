@@ -12,7 +12,7 @@ export default function NewsArticles() {
     <section className={styles.newsSection} aria-labelledby="news-section-title">
       <div className={styles.worldMapBg} aria-hidden="true">
         <Image
-          src="/assets/Home/stats-map.png"
+          src="/assets/Home/stats-map-new.jpeg"
           alt="World Map Background"
           fill
           sizes="100vw"

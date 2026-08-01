@@ -10,7 +10,7 @@ export const newsArticlesContent = {
       date: "Wednesday, September 25, 2024",
       title: "Best & caring Orthopedic surgeons in hospital",
       image: {
-        src: "/assets/News/Image-W4LNYU8.jpg",
+        src: "/assets/News/news1.JPG",
         alt: "Best & caring Orthopedic surgeons in hospital",
       },
       href: "/news/best-orthopedic-surgeons",
@@ -21,7 +21,7 @@ export const newsArticlesContent = {
       date: "Wednesday, February 28, 2024",
       title: "The Most important Ventilator Equipment available",
       image: {
-        src: "/assets/News/At-Wilmer-Eye-Institute-Johns-Hopkins-Hospital-Baltimore-USA-2.jpg",
+        src: "/assets/News/news2.JPG",
         alt: "The Most important Ventilator Equipment available",
       },
       href: "/news/ventilator-equipment",
@@ -32,7 +32,7 @@ export const newsArticlesContent = {
       date: "Monday, September 16, 2024",
       title: "What’s the reason so many older adults aren’t active?",
       image: {
-        src: "/assets/News/Services-Z7JB6LZ.jpg",
+        src: "/assets/News/news3.JPG",
         alt: "What’s the reason so many older adults aren’t active?",
       },
       href: "/news/why-older-adults-not-active",

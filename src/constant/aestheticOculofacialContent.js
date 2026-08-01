@@ -71,11 +71,11 @@ export const aestheticOculofacialContent = {
       { id: 4, label: "Age-related Changes" },
     ],
     mainImage: {
-      src: "/assets/Aesthetic/whatis_oculoplasty.png",
+      src: "/assets/Aesthetic/whatis_oculoplasty-new.jpeg",
       alt: "Aesthetic Oculoplasty Examination",
     },
     insetImage: {
-      src: "/assets/Aesthetic/oculoplasty_consultation1.png",
+      src: "/assets/Aesthetic/oculoplasty_consultation-new.jpeg",
       alt: "Doctor Consultation",
     },
   },
@@ -87,7 +87,7 @@ export const aestheticOculofacialContent = {
     highlightText:
       "At Namokar Eye & Oculoplasty Centre, aesthetic eye-area procedures are led by Dr. Poonam Jain, who has training in aesthetic oculoplasty and experience in ophthalmology and oculoplasty.",
     image: {
-      src: "/assets/Aesthetic/IMG_0051.JPG",
+      src: "/assets/Aesthetic/IMG_0051-new.JPG",
       alt: "Dr. Poonam Jain consulting a patient",
     },
   },
@@ -99,7 +99,7 @@ export const aestheticOculofacialContent = {
         title: "Blepharoplasty / Eyelid Surgery",
         description:
           "Blepharoplasty helps remove excess eyelid skin and address heaviness or puffiness around the eyes. It may improve appearance and, in selected cases, comfort or vision obstruction caused by excess skin.",
-        imageSrc: "/assets/Aesthetic/Blepharoplasty.png",
+        imageSrc: "/assets/Aesthetic/Blepharoplasty-new.jpeg",
         imageAlt: "Blepharoplasty / Eyelid Surgery",
       },
       {
@@ -107,7 +107,7 @@ export const aestheticOculofacialContent = {
         title: "Under-Eye Bag Correction",
         description:
           "This treatment focuses on reducing or repositioning under-eye fat deposits to create a smoother and more refreshed appearance.",
-        imageSrc: "/assets/Aesthetic/Dark Circles and Under-Eye Concerns.png",
+        imageSrc: "/assets/Aesthetic/under_eye_bag.jpeg",
         imageAlt: "Under-Eye Bag Correction",
       },
       {
@@ -115,7 +115,7 @@ export const aestheticOculofacialContent = {
         title: "Botox, Fillers & Threads",
         description:
           "These treatments may be recommended depending on the patient’s concern, age, skin quality, and doctor’s assessment.",
-        imageSrc: "/assets/Aesthetic/Thread Lift.png",
+        imageSrc: "/assets/Aesthetic/botox.jpeg",
         imageAlt: "Botox, Fillers & Threads",
       },
       {
@@ -123,7 +123,7 @@ export const aestheticOculofacialContent = {
         title: "Aesthetic Oculofacial Care",
         description:
           "Aesthetic oculofacial care focuses on rejuvenating the eye and upper face region while maintaining natural facial balance.",
-        imageSrc: "/assets/Aesthetic/Brow Lift.png",
+        imageSrc: "/assets/Aesthetic/oculofacial_care.jpeg",
         imageAlt: "Aesthetic Oculofacial Care",
       },
     ],
@@ -135,7 +135,7 @@ export const aestheticOculofacialContent = {
     subtitle:
       "We follow a patient-first approach to ensure safe treatments, natural results and complete satisfaction.",
     image: {
-      src: "/assets/Aesthetic/expected_approach_doctor.JPG",
+      src: "/assets/Aesthetic/expected_approach_doctor_new.JPG",
       alt: "Specialist examining patient eyelids",
     },
     banner: {
@@ -236,8 +236,8 @@ export const aestheticOculofacialContent = {
       {
         id: "blepharoplasty",
         title: "Upper Eyelid Blepharoplasty",
-        beforeImage: "/assets/Aesthetic/before_blepharoplasty.png",
-        afterImage: "/assets/Aesthetic/after_blepharoplasty.png",
+        beforeImage: "/assets/Aesthetic/blepharoplasty-before.jpeg",
+        afterImage: "/assets/Aesthetic/blepharoplasty_after.jpeg",
         description:
           "Improved eyelid contour with natural appearance. 6 weeks post-procedure.",
         disclaimer: "Results vary. Images displayed with patient consent.",
@@ -245,8 +245,8 @@ export const aestheticOculofacialContent = {
       {
         id: "thread-lift",
         title: "Thread Lift",
-        beforeImage: "/assets/Aesthetic/before_threadlift.png",
-        afterImage: "/assets/Aesthetic/after_threadlift.png",
+        beforeImage: "/assets/Aesthetic/thread_lift_before.jpeg",
+        afterImage: "/assets/Aesthetic/thread_lift_after.jpeg",
         description:
           "Subtle facial lift with minimally invasive approach. 3 months post-treatment.",
         disclaimer: "Results vary. Images displayed with patient consent.",
@@ -254,8 +254,8 @@ export const aestheticOculofacialContent = {
       {
         id: "brow-lift",
         title: "Brow Lift",
-        beforeImage: "/assets/Aesthetic/before_browlift.png",
-        afterImage: "/assets/Aesthetic/after_browlift.png",
+        beforeImage: "/assets/Aesthetic/brow_lift_before.jpeg",
+        afterImage: "/assets/Aesthetic/brow_lift_after.jpeg",
         description:
           "Enhanced brow position creating better eye area balance. 8 weeks post-procedure.",
         disclaimer: "Results vary. Images displayed with patient consent.",

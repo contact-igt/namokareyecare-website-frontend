@@ -113,7 +113,7 @@ export const homeContent = {
         variant: "top",
       },
       {
-        src: "/why_choose_us.jpg",
+        src: "/why_choose_us_new.jpg",
         alt: "Modern eye care treatment room",
         variant: "bottom",
       },
@@ -129,7 +129,7 @@ export const homeContent = {
         description:
           "Treatment for functional and cosmetic eyelid concerns affecting appearance, comfort, and eye health.",
         image: {
-          src: "/assets/droping.jpg",
+          src: "/assets/drooping_new1.jpeg",
           alt: "Treatment for functional and cosmetic eyelid concerns",
         },
       },
@@ -139,7 +139,7 @@ export const homeContent = {
         description:
           "Specialized correction of drooping eyelids that may affect vision, facial symmetry, and confidence.",
         image: {
-          src: "/assets/droopy_eylid_correction.jpg",
+          src: "/assets/droopy_eyelid_correction_new.jpeg",
           alt: "Specialized correction of drooping eyelids",
         },
       },
@@ -149,7 +149,7 @@ export const homeContent = {
         description:
           "Aesthetic oculoplasty procedures designed to improve under-eye puffiness and rejuvenate the eye area.",
         image: {
-          src: "/assets/under_bags.jpeg",
+          src: "/assets/under_bags_new.jpeg",
           alt: "Aesthetic oculoplasty procedures for under-eye bags",
         },
       },
@@ -159,7 +159,7 @@ export const homeContent = {
         description:
           "Diagnosis and treatment of tear drainage disorders causing excessive watering and discomfort.",
         image: {
-          src: "/assets/eye_Lid.jpg",
+          src: "/assets/watery_treatment.jpeg",
           alt: "Diagnosis and treatment of tear drainage disorders",
         },
       },
@@ -225,7 +225,7 @@ export const homeContent = {
     eyebrow: "Our Journey of Care & Trust",
     title: ["Our Journey of Care & Trust"],
     background: {
-      src: "/assets/Home/stats-map.png",
+      src: "/assets/Home/stats-map-new.jpeg",
       alt: "",
       width: 1320,
       height: 380,
@@ -307,7 +307,7 @@ export const homeContent = {
           "Specialized expertise in Oculoplasty, Aesthetic Oculoplasty, Cataract Surgery, and Comprehensive Eye Care.",
         ],
         image: {
-          src: "/assets/Doctors/Main_doctor.png",
+          src: "/assets/Doctors/Main_doctor-new.jpeg",
           alt: "Dr. Poonam Jain",
           width: 1200,
           height: 1200,
@@ -319,7 +319,7 @@ export const homeContent = {
         name: "Dr. Ankur Gupta",
         designation: "Sr. consultant",
         image: {
-          src: "/assets/Doctors/doctor3.png",
+          src: "/assets/Doctors/doctor3-new.jpeg",
           alt: "Dr. Ankur Gupta",
           width: 1200,
           height: 1200,
@@ -329,7 +329,7 @@ export const homeContent = {
         name: "Dr. Shekhar Sanghi",
         designation: "Consultant Cataract and",
         image: {
-          src: "/assets/Doctors/Doctor2.png",
+          src: "/assets/Doctors/Doctor2-new.jpeg",
           alt: "Dr. Shekhar Sanghi",
           width: 1200,
           height: 1200,
