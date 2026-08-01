@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import {
-  ArrowRight,
   BadgePlus,
   Bone,
   CirclePlus,
@@ -91,7 +90,7 @@ function ServiceIcon({ type }) {
 }
 
 export default function Services() {
-  const { eyebrow, title, items, cta } = homeContent.services;
+  const { eyebrow, title, items } = homeContent.services;
 
   return (
     <section className={styles.services} aria-labelledby="home-services-title">
@@ -146,13 +145,6 @@ export default function Services() {
               </span>
             </Link>
           ))}
-        </div>
-
-        <div className={styles.ctaRow}>
-          <Link href={cta.href} className={styles.cta}>
-            {cta.label}
-            <ArrowRight size={18} strokeWidth={2.2} aria-hidden="true" />
-          </Link>
         </div>
       </div>
     </section>
