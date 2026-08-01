@@ -22,7 +22,7 @@ export const homeContent = {
     },
   },
   services: {
-    eyebrow: "Our Specialized Services",
+    eyebrow: "What We Offer",
     title: "Our Specialized Services",
     items: [
       {
@@ -242,7 +242,7 @@ export const homeContent = {
         countTo: 25,
         durationMs: 1350,
         valueSuffix: "+",
-        label: "Experience in Eye Care",
+        label: "Years of Experience in Eye Care",
         icon: {
           src: "/assets/Home/stats-years-served.png",
           alt: "",
@@ -279,7 +279,10 @@ export const homeContent = {
         },
       },
       {
-        value: "00,000+",
+        value: "50,000+",
+        countTo: 50000,
+        durationMs: 1600,
+        valueSuffix: "+",
         label: "Successful Procedures",
         icon: {
           src: "/assets/Home/stats-happy-patients.png",

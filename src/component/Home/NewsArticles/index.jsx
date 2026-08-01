@@ -40,7 +40,12 @@ export default function NewsArticles() {
 
         <div className={styles.grid}>
           {articles.map((article, i) => (
-            <RevealOnView key={article.id} variant="fadeUp" delay={i * 130}>
+            <RevealOnView
+              key={article.id}
+              variant="fadeUp"
+              delay={i * 130}
+              className={styles.cardWrapper}
+            >
               <article className={styles.card}>
                 <div className={styles.imageWrap}>
                   <Image
@@ -55,12 +60,12 @@ export default function NewsArticles() {
                 <div className={styles.cardBody}>
                   <div className={styles.metaRow}>
                     <div className={styles.metaItem}>
-                      <User size={14} className={styles.metaIcon} />
+                      <User size={13} className={styles.metaIcon} />
                       <span>By: {article.author}</span>
                     </div>
                     <div className={styles.metaDivider}>|</div>
                     <div className={styles.metaItem}>
-                      <Calendar size={14} className={styles.metaIcon} />
+                      <Calendar size={13} className={styles.metaIcon} />
                       <span>{article.date}</span>
                     </div>
                   </div>

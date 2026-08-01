@@ -67,7 +67,9 @@ function AnimatedValue({ item, active }) {
 
   const formattedValue =
     typeof item.countTo === "number"
-      ? displayValue.toFixed(item.decimals ?? 0)
+      ? item.decimals
+        ? displayValue.toFixed(item.decimals)
+        : Math.round(displayValue).toLocaleString("en-IN")
       : item.value;
 
   return (
