@@ -13,7 +13,7 @@ export const headerContent = {
   },
   navItems: [
     { label: "Home", href: "/" },
-    { label: "Doctors", href: "/doctors" },
+    { label: "About Us", href: "/about" },
     {
       label: "Treatments",
       href: "/treatments",
@@ -22,7 +22,7 @@ export const headerContent = {
         { label: "Aesthetic Oculofacial", href: "/treatments/aesthetic-oculofacial" },
       ],
     },
-    { label: "About Us", href: "/about" },
+    { label: "Doctors", href: "/doctors" },
     { label: "Contact", href: "/contact" },
   ],
   appointment: {
