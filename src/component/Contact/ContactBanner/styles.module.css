@@ -1,0 +1,364 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: var(--hero-height);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f7f0e7;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/contact/banner.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 250, 245, 0.78) 44%, rgba(255, 255, 255, 0.05) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nabhLogoWrapper {
+  position: absolute;
+  top: 32px;
+  right: 56px;
+  z-index: 10;
+}
+
+.nabhLogo {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 56px), 1440px);
+  margin: 0 auto;
+  padding: 80px 0 160px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.copy {
+  max-width: 690px;
+  padding-top: 4px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  font-family: var(--font-satoshi);
+  color: #1a73e8;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 120px;
+  height: 2px;
+  background: #1a73e8;
+}
+
+.title {
+  max-width: 680px;
+  margin: 0;
+  font-family: var(--font-satoshi);
+  color: #711f1c;
+  font-size: clamp(48px, 4.4vw, 68px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.titleLine {
+  display: block;
+}
+
+.titleLine + .titleLine {
+  margin-top: 10px;
+}
+
+.description {
+  max-width: 620px;
+  margin: 30px 0 0;
+  font-family: var(--font-satoshi);
+  color: #111111;
+  font-size: clamp(17px, 1.15vw, 19px);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.cta,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 54px;
+  border-radius: 999px;
+  font-family: var(--font-satoshi);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.cta {
+  min-width: 228px;
+  padding: 0 32px;
+  background: #1a73e8;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.25);
+}
+
+.cta:hover {
+  background: #155cb8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 115, 232, 0.35);
+}
+
+.ctaSecondary {
+  min-width: 160px;
+  padding: 0 28px;
+  border: 2px solid #711f1c;
+  color: #711f1c;
+  background: transparent;
+}
+
+.ctaSecondary:hover {
+  background: #711f1c;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(113, 31, 28, 0.2);
+}
+
+.statsCardWrapper {
+  position: absolute;
+  bottom: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 56px), 1440px);
+  z-index: 2;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.statsCard {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 20px 40px;
+  border-left: 6px solid #1a73e8;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.statsItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #d2e3fc;
+  background: #f8f9fa;
+  color: #1a73e8;
+}
+
+.statsContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.statsNumber {
+  font-family: var(--font-satoshi);
+  color: #111111;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.statsLabel {
+  font-family: var(--font-satoshi);
+  color: #5f6368;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  .heroInner {
+    padding: 60px 0 180px;
+  }
+
+  .statsCardWrapper {
+    left: 0;
+    width: 100%;
+    transform: none;
+    justify-content: center;
+  }
+
+  .statsCard {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero::before {
+    background-image: url("/assets/contact/banner.png");
+    background-position: center center;
+  }
+
+  .nabhLogoWrapper {
+    top: 24px;
+    right: 24px;
+  }
+
+  .nabhLogo {
+    width: 80px;
+  }
+
+  .heroInner {
+    width: 100%;
+    padding: 80px 20px 180px;
+  }
+
+  .statsCardWrapper {
+    bottom: 32px;
+  }
+
+  .statsCard {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 650px;
+    align-items: center;
+  }
+
+  .hero::before {
+    background-image: url("/assets/contact/banner.png");
+    background-position: top center;
+  }
+
+  .hero::after {
+    background: linear-gradient(rgb(255 255 255 / 55%) 0%, rgb(255 255 255 / 94%) 45%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .heroInner {
+    padding: 80px 16px;
+  }
+
+  .eyebrow {
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .eyebrowLine {
+    width: 40px;
+  }
+
+  .title {
+    font-size: clamp(32px, 7.5vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .description {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .ctaGroup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .cta,
+  .ctaSecondary {
+    width: 100%;
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .statsCardWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .nabhLogoWrapper {
+    top: 16px;
+    right: 16px;
+  }
+
+  .nabhLogo {
+    width: 65px;
+  }
+
+  .heroInner {
+    padding: 80px 12px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+
