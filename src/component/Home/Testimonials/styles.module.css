@@ -186,6 +186,28 @@
   color: #6b8fa6;
 }
 
+.googleAvatarBadge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorNameLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.authorNameLink:hover .authorName {
+  color: #1a73e8;
+}
+
 .authorInfo {
   display: flex;
   flex-direction: column;

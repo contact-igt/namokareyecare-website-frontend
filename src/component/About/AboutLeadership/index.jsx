@@ -23,9 +23,7 @@ export default function AboutLeadership() {
           <div className={styles.header}>
             <span className={styles.eyebrow}>{eyebrow}</span>
             <h2 id="about-leadership-title" className={styles.title}>
-              {title.split("\n").map((line) => (
-                <span key={line}>{line}</span>
-              ))}
+              {title}
             </h2>
           </div>
         </RevealOnView>

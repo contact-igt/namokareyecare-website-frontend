@@ -3,10 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, UserCheck } from "lucide-react";
+import { ArrowRight, UserCheck, Award, Eye, Star, Users } from "lucide-react";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import { aestheticOculofacialContent } from "@/constant/aestheticOculofacialContent";
 import styles from "./styles.module.css";
+
+const STAT_ICONS = {
+  Award,
+  Eye,
+  Star,
+  Users,
+};
 
 function AnimatedStat({ stat, active }) {
   const [display, setDisplay] = useState(0);
@@ -156,15 +163,25 @@ export default function AestheticOculofacialBanner() {
       {/* Stats Bar */}
       <div className={styles.statsBarWrapper} ref={statsRef}>
         <div className={styles.statsBar}>
-          {stats.map((stat, i) => (
-            <div className={styles.statItem} key={stat.label}>
-              <AnimatedStat stat={stat} active={statsActive} />
-              <span className={styles.statLabel}>{stat.label}</span>
-              {i < stats.length - 1 && (
-                <span className={styles.statDivider} aria-hidden="true" />
-              )}
-            </div>
-          ))}
+          {stats.map((stat, i) => {
+            const Icon = STAT_ICONS[stat.icon];
+            return (
+              <div className={styles.statItem} key={stat.label}>
+                {Icon && (
+                  <div className={styles.iconCircle}>
+                    <Icon size={20} className={styles.statIcon} />
+                  </div>
+                )}
+                <div className={styles.statTextGroup}>
+                  <AnimatedStat stat={stat} active={statsActive} />
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </div>
+                {i < stats.length - 1 && (
+                  <span className={styles.statDivider} aria-hidden="true" />
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

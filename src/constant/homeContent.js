@@ -169,7 +169,11 @@ export const homeContent = {
     eyebrow: "Specialized Care",
     title: "Specialized Treatments for Functional & Aesthetic Eye Care",
     description:
-      "At Namokar Eye & Oculoplasty Centre, treatment goes beyond vision correction. Our focus is on restoring function, comfort, appearance, and confidence through specialized eye care solutions.",
+      "At Namokar Eye & Oculoplasty Centre, we restore vision, function, comfort, and confidence through specialized eye care.",
+    cta: {
+      label: "Book Consultation",
+      href: "/appointment",
+    },
     media: {
       src: "/assets/Home/why-choice-hospital.png",
       alt: "Namokar Eye and Oculoplasty Centre exterior",
@@ -196,28 +200,28 @@ export const homeContent = {
         icon: "history",
         title: "International Training & Expertise",
         description:
-          "Dr. Poonam Jain has undergone advanced training in aesthetic oculoplasty and international observerships, bringing specialized expertise to every patient consultation.",
+          "International oculoplasty training with advanced expertise in functional and aesthetic eye care.",
       },
       {
         variant: "secondary",
         icon: "microscope",
         title: "NABH Certified Eye Centre",
         description:
-          "Maintaining high standards of safety, hygiene, and patient care across every stage of treatment.",
+          "NABH-certified care with high standards of safety, hygiene, and patient care.",
       },
       {
         variant: "secondary",
         icon: "stethoscope",
         title: "Doctor-Led Personalized Care",
         description:
-          "Every patient receives a treatment plan tailored to their condition, expectations, and long-term eye health goals.",
+          "Personalized treatment plans designed for your eye condition and long-term vision.",
       },
       {
         variant: "primary",
         icon: "eye",
         title: "Comprehensive Eye Services",
         description:
-          "From cataract surgery to reconstructive and aesthetic oculoplasty, patients benefit from integrated eye care under one roof.",
+          "Complete eye care from cataract surgery to reconstructive and aesthetic oculoplasty.",
       },
     ],
   },
@@ -238,7 +242,7 @@ export const homeContent = {
     },
     items: [
       {
-        value: "25+",
+        value: "30",
         countTo: 25,
         durationMs: 1350,
         valueSuffix: "+",

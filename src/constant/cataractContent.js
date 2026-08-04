@@ -72,6 +72,24 @@ export const cataractContent = {
         featured: true,
       },
       {
+        id: "edof",
+        title: "EDOF IOL",
+        category: "EXTENDED DEPTH OF FOCUS",
+        description:
+          "Provides a continuous, seamless range of clear vision from distance to intermediate, with minimal glare and enhanced night vision.",
+        points: [
+          "Seamless distance to intermediate vision",
+          "Reduced glare & halos at night",
+          "Natural visual continuity",
+        ],
+        image: {
+          src: "/assets/cataract/techs1-new.jpeg",
+          alt: "EDOF IOL – Extended Depth of Focus Intraocular Lens",
+        },
+        icon: "Focus",
+        featured: false,
+      },
+      {
         id: "toric",
         title: "Toric IOL",
         category: "ASTIGMATISM CORRECTION",
@@ -349,15 +367,6 @@ export const cataractContent = {
           toric: { text: "Patients with astigmatism", check: false },
           "enhanced-monofocal": { text: "Who want less dependency on glasses", check: false },
           "trifocal-multifocal": { text: "Spectacle-free living", check: false },
-        },
-      },
-      {
-        label: "Typical starting cost (per eye)",
-        values: {
-          monofocal: { text: "₹25,000 - ₹42,000", check: false },
-          toric: { text: "₹42,000 - ₹55,000", check: false },
-          "enhanced-monofocal": { text: "₹50,000 - ₹70,000", check: false },
-          "trifocal-multifocal": { text: "₹55,000 - ₹1,15,000", check: false },
         },
       },
     ],

@@ -18,6 +18,7 @@ export const aestheticOculofacialContent = {
     },
     stats: [
       {
+        icon: "Award",
         prefix: "",
         suffix: "+",
         label: "Years Eye Care Experience",
@@ -26,6 +27,7 @@ export const aestheticOculofacialContent = {
         decimals: 0,
       },
       {
+        icon: "Eye",
         prefix: "",
         suffix: "+",
         label: "Oculoplasty Cases",
@@ -35,6 +37,7 @@ export const aestheticOculofacialContent = {
         formatThousands: true,
       },
       {
+        icon: "Star",
         prefix: "",
         suffix: "★",
         label: "Google Rating",
@@ -44,6 +47,7 @@ export const aestheticOculofacialContent = {
         isStar: true,
       },
       {
+        icon: "Users",
         prefix: "",
         suffix: "+",
         label: "Patient Reviews",

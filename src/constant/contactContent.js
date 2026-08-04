@@ -32,8 +32,8 @@ export const contactContent = {
       },
       {
         icon: "Phone",
-        title: "Call Us Anytime",
-        text: "+91-9810419720",
+        title: "Call Us",
+        text: "+91-9810419720\nMon - Sat: 9:00 AM - 6:00 PM",
         href: "tel:+919810419720",
         linkLabel: "Call Now",
         featured: true,
@@ -48,7 +48,7 @@ export const contactContent = {
       {
         icon: "Clock",
         title: "Working Hours",
-        text: "Monday - Friday: 8:00 AM - 8:00 PM\nSunday: Closed",
+        text: "Mon - Sat: 9:00 AM - 6:00 PM\nSunday: Closed",
         href: "/appointment",
         linkLabel: "Book Visit",
       },

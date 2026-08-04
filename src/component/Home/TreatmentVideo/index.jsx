@@ -2,8 +2,9 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-import { Clock3, Copy, Eye, Microscope, Stethoscope, History } from "lucide-react";
+import { Clock3, Copy, Eye, Microscope, Stethoscope, History, ArrowRight } from "lucide-react";
 import { homeContent } from "@/constant/homeContent";
 import styles from "./styles.module.css";
 
@@ -17,7 +18,7 @@ const cardIcons = {
 };
 
 export default function TreatmentVideo() {
-  const { eyebrow, title, description, cards, media, sparkle, arrow } =
+  const { eyebrow, title, description, cta, cards, media, sparkle, arrow } =
     homeContent.treatmentVideo;
 
   const videoRef = useRef(null);
@@ -88,6 +89,15 @@ export default function TreatmentVideo() {
               );
             })}
           </motion.div>
+
+          {cta && (
+            <div className={styles.ctaWrapper}>
+              <Link href={cta.href} className={styles.ctaBtn}>
+                {cta.label}
+                <ArrowRight size={16} strokeWidth={2.2} aria-hidden="true" />
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className={styles.rightContainer}>

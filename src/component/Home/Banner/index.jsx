@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Award, Users, Phone } from "lucide-react";
+import { ArrowRight, Award, Users, Phone, ShieldCheck } from "lucide-react";
 import { homeContent } from "@/constant/homeContent";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import styles from "./styles.module.css";
@@ -10,18 +10,6 @@ export default function Banner() {
 
   return (
     <section className={styles.hero} aria-label="Namokar Eye hero">
-      {/* Top right NABH Logo */}
-      <div className={styles.nabhLogoWrapper}>
-        <Image
-          src="/assets/Header/Patient_saftey_logo.png"
-          alt="Patient Safety & Quality of Care NABH Certified Logo"
-          width={100}
-          height={100}
-          className={styles.nabhLogo}
-          priority
-        />
-      </div>
-
       <div className={styles.heroInner}>
         <div className={styles.copy}>
           <RevealOnView variant="fadeUp" delay={0}>
@@ -47,6 +35,31 @@ export default function Banner() {
             <p className={styles.description}>{description}</p>
           </RevealOnView>
 
+          <RevealOnView variant="fadeUp" delay={420}>
+            <div className={styles.nabhBadgeWrapper}>
+              <div className={styles.nabhBadge}>
+                <div className={styles.nabhLogoBox}>
+                  <Image
+                    src="/assets/Header/Patient_saftey_logo.png"
+                    alt="NABH Certified Logo"
+                    width={32}
+                    height={32}
+                    className={styles.nabhBadgeLogo}
+                  />
+                </div>
+                <div className={styles.nabhBadgeTextGroup}>
+                  <span className={styles.nabhBadgeTitle}>
+                    <ShieldCheck size={16} className={styles.shieldIcon} />
+                    NABH Certified Eye Centre
+                  </span>
+                  <span className={styles.nabhBadgeSubtitle}>
+                    Highest Quality & Patient Safety Standards
+                  </span>
+                </div>
+              </div>
+            </div>
+          </RevealOnView>
+
           <RevealOnView variant="fadeUp" delay={480}>
             <div className={styles.ctaGroup}>
               <Link href={cta.href} className={styles.cta}>
@@ -70,7 +83,7 @@ export default function Banner() {
               <Award className={styles.statsIcon} size={22} />
             </div>
             <div className={styles.statsContent}>
-              <span className={styles.statsNumber}>25+</span>
+              <span className={styles.statsNumber}>30</span>
               <span className={styles.statsLabel}>Years Excellence</span>
             </div>
           </div>

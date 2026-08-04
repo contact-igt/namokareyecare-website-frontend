@@ -35,31 +35,49 @@
   line-height: 1.6;
 }
 
-.grid {
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.row1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  width: 100%;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: calc(75% - 6px);
+  margin: 0 auto;
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid #e2e8f0;
   padding: 36px 24px 32px;
   box-shadow: 0 8px 24px rgba(27, 66, 129, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(27, 66, 129, 0.08);
-  border-color: #cbd5e1;
+  transform: translateY(-6px);
+  border-color: #93c5fd;
+  box-shadow: 0 18px 40px rgba(2, 132, 199, 0.16), 0 0 24px rgba(2, 132, 199, 0.15);
 }
 
 .iconCircle {
@@ -72,13 +90,15 @@
   background: #e0f2fe;
   color: #0284c7;
   margin-bottom: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+  transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .card:hover .iconCircle {
-  transform: scale(1.08);
+  transform: scale(1.1);
   background: #0284c7;
   color: #ffffff;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
 }
 
 .cardTitle {
@@ -99,9 +119,11 @@
 }
 
 @media (max-width: 1024px) {
-  .grid {
+  .row1,
+  .row2 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    width: 100%;
+    margin: 0;
   }
 
   .title {
@@ -114,8 +136,15 @@
     padding: 55px 0;
   }
 
-  .grid {
+  .cardsContainer {
+    gap: 20px;
+  }
+
+  .row1,
+  .row2 {
     grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
     gap: 20px;
   }
 

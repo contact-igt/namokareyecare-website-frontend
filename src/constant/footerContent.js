@@ -19,7 +19,7 @@ export const footerContent = {
   openingHours: {
     title: "Opening Hours",
     rows: [
-      { days: "Mon - Sat:", time: "9 AM - 4 PM" },
+      { days: "Mon - Sat:", time: "9 AM - 6 PM" },
       { days: "Sunday:", time: "Closed" },
     ],
   },
@@ -46,6 +46,23 @@ export const footerContent = {
       ariaLabel: "YouTube",
     },
   ],
+  expertCare: {
+    title: "Expert Care",
+    doctor: {
+      name: "Doctor: Dr. Poonam Jain",
+      qualifications: "MBBS, MS, Medical Director & Senior Ophthalmologist.",
+      experience: "30 years in Ophthalmology & Oculoplasty.",
+    },
+  },
+  quickContact: {
+    title: "Quick Contact",
+    phone: "+91-9810419720",
+    email: "info@namokareye.com",
+  },
+  location: {
+    title: "Location",
+    address: "13 A, Pocket-A, Phase-3 Ashok Vihar,\nNear Satyawati College,\nNew Delhi-110052",
+  },
   copyright: "© 2026 Namokar Eye Clinic. All rights reserved.",
   poweredBy: "Invictus Global Tech Pvt Ltd",
 };

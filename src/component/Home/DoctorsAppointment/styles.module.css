@@ -99,28 +99,32 @@
 }
 
 .singleDoctorBody {
-  grid-template-columns: minmax(440px, 580px) minmax(400px, 500px);
+  grid-template-columns: minmax(320px, 420px) minmax(340px, 440px);
   gap: 40px;
   justify-content: center;
+  align-items: start;
 }
 
 /* Base Doctor Card (Static layout, no entry animations) */
 .doctorCard {
   background: #ffffff;
   font-family: var(--font-satoshi);
-  box-shadow: 0 14px 40px rgba(27, 60, 116, 0.08);
-  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
   transition:
     transform 300ms ease,
-    box-shadow 300ms ease;
+    box-shadow 300ms ease,
+    border-color 300ms ease;
   overflow: hidden;
 }
 
 .doctorCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 56px rgba(27, 60, 116, 0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.09);
+  border-color: #cbd5e1;
 }
 
 /* Large Card Styles (Dr. Poonam Jain) */
@@ -131,9 +135,9 @@
 
 .largeDoctorImageWrap {
   width: 100%;
-  height: 500px;
+  height: 330px;
   overflow: hidden;
-  background: #eef9ff;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%);
   position: relative;
 }
 
@@ -142,7 +146,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   transition: transform 400ms ease;
 }
 
@@ -151,7 +155,7 @@
 }
 
 .largeDoctorInfo {
-  padding: 24px 28px 30px;
+  padding: 22px 24px 26px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,26 +163,26 @@
 }
 
 .largeCard .doctorName {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-family: var(--font-satoshi);
   color: var(--color-navy);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 36px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
   letter-spacing: -0.2px;
 }
 
 .doctorDesignationWrap {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .largeCard .doctorDesignation {
   margin: 2px 0;
-  color: #727c8d;
+  color: #64748b;
   font-family: var(--font-satoshi);
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 20px;
   letter-spacing: -0.1px;
 }
 
@@ -308,19 +312,19 @@
   align-self: stretch;
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 440px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0;
 }
 
 /* Appointment Form Card (Static) */
 .formCard {
   width: 100%;
   overflow: hidden;
-  border: 0;
-  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   background: #ffffff;
-  box-shadow: 0 16px 44px rgba(27, 60, 116, 0.08);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
   position: sticky;

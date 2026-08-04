@@ -14,7 +14,7 @@
   inset: 0;
   background-image: url("/assets/about/banner.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right -80px center;
   background-size: cover;
   z-index: 0;
 }

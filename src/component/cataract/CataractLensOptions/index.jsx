@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Eye, Sparkles, Target, Info } from "lucide-react";
+import { Eye, Sparkles, Target, Info, Focus } from "lucide-react";
 import RevealOnView from "@/common/RevealOnView";
 import { cataractContent } from "@/constant/cataractContent";
 import styles from "./styles.module.css";
@@ -10,6 +10,7 @@ const iconMap = {
   Eye,
   Sparkles,
   Target,
+  Focus,
 };
 
 export default function CataractLensOptions() {

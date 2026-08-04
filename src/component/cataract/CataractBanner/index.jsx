@@ -3,12 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, Award, Eye, Star, Users } from "lucide-react";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import styles from "./styles.module.css";
 
 const STATS = [
   {
+    icon: Award,
     prefix: "",
     suffix: "+",
     label: "Years Eye Care Experience",
@@ -17,6 +18,7 @@ const STATS = [
     decimals: 0,
   },
   {
+    icon: Eye,
     prefix: "",
     suffix: "+",
     label: "Cataract Surgeries",
@@ -26,6 +28,7 @@ const STATS = [
     formatThousands: true,
   },
   {
+    icon: Star,
     prefix: "",
     suffix: "★",
     label: "Google Rating",
@@ -35,6 +38,7 @@ const STATS = [
     isStar: true,
   },
   {
+    icon: Users,
     prefix: "",
     suffix: "+",
     label: "Patient Reviews",
@@ -172,15 +176,25 @@ export default function CataractBanner() {
       {/* Stats Bar */}
       <div className={styles.statsBarWrapper} ref={statsRef}>
         <div className={styles.statsBar}>
-          {STATS.map((stat, i) => (
-            <div className={styles.statItem} key={stat.label}>
-              <AnimatedStat stat={stat} active={statsActive} />
-              <span className={styles.statLabel}>{stat.label}</span>
-              {i < STATS.length - 1 && (
-                <span className={styles.statDivider} aria-hidden="true" />
-              )}
-            </div>
-          ))}
+          {STATS.map((stat, i) => {
+            const Icon = stat.icon;
+            return (
+              <div className={styles.statItem} key={stat.label}>
+                {Icon && (
+                  <div className={styles.iconCircle}>
+                    <Icon size={20} className={styles.statIcon} />
+                  </div>
+                )}
+                <div className={styles.statTextGroup}>
+                  <AnimatedStat stat={stat} active={statsActive} />
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </div>
+                {i < STATS.length - 1 && (
+                  <span className={styles.statDivider} aria-hidden="true" />
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

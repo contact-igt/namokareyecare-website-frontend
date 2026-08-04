@@ -25,6 +25,8 @@ const iconMap = {
 
 export default function SpecialistLedApproach() {
   const { title, subtitle, reasons } = aestheticOculofacialContent.whyChooseNamokar;
+  const row1 = reasons.slice(0, 4);
+  const row2 = reasons.slice(4);
 
   return (
     <section className={styles.section} aria-labelledby="why-choose-namokar-title">
@@ -38,22 +40,44 @@ export default function SpecialistLedApproach() {
           </div>
         </RevealOnView>
 
-        <div className={styles.grid}>
-          {reasons.map((card, index) => {
-            const IconComponent = iconMap[card.icon] || ShieldCheck;
+        <div className={styles.cardsContainer}>
+          <div className={styles.row1}>
+            {row1.map((card, index) => {
+              const IconComponent = iconMap[card.icon] || ShieldCheck;
 
-            return (
-              <RevealOnView key={card.id} variant="fadeUp" delay={100 + index * 60}>
-                <div className={styles.card}>
-                  <div className={styles.iconCircle}>
-                    <IconComponent size={24} className={styles.icon} />
+              return (
+                <RevealOnView key={card.id} variant="fadeUp" delay={100 + index * 60}>
+                  <div className={styles.card}>
+                    <div className={styles.iconCircle}>
+                      <IconComponent size={24} className={styles.icon} />
+                    </div>
+                    <h3 className={styles.cardTitle}>{card.title}</h3>
+                    <p className={styles.cardDescription}>{card.description}</p>
                   </div>
-                  <h3 className={styles.cardTitle}>{card.title}</h3>
-                  <p className={styles.cardDescription}>{card.description}</p>
-                </div>
-              </RevealOnView>
-            );
-          })}
+                </RevealOnView>
+              );
+            })}
+          </div>
+
+          {row2.length > 0 && (
+            <div className={styles.row2}>
+              {row2.map((card, index) => {
+                const IconComponent = iconMap[card.icon] || ShieldCheck;
+
+                return (
+                  <RevealOnView key={card.id} variant="fadeUp" delay={100 + (index + 4) * 60}>
+                    <div className={styles.card}>
+                      <div className={styles.iconCircle}>
+                        <IconComponent size={24} className={styles.icon} />
+                      </div>
+                      <h3 className={styles.cardTitle}>{card.title}</h3>
+                      <p className={styles.cardDescription}>{card.description}</p>
+                    </div>
+                  </RevealOnView>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>

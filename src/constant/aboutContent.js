@@ -19,7 +19,7 @@ export const aboutContent = {
   },
   leadership: {
     eyebrow: "Leadership",
-    title: "Expertise Your Eyes\nDeserves",
+    title: "Expertise Your Eyes Deserves",
     image: {
       src: "/assets/about/about_doctor.png",
       alt: "Dr. Poonam Jain at Namokar Eye and Oculoplasty Centre",
@@ -34,7 +34,6 @@ export const aboutContent = {
     ],
     highlights: [
       { title: "Johns Hopkins Hospital, Baltimore, USA", label: "Observership", icon: "award" },
-      { title: "Safdarjung Hospital, New Delhi", label: "MS (Ophthalmology)", icon: "book" },
       { title: "25K+ Surgeries", label: "Performed", icon: "users" },
       { title: "25+ Years", label: "Experience", icon: "calendar" },
     ],

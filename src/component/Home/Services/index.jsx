@@ -12,9 +12,11 @@ import {
   Stethoscope,
   Award,
   Users,
+  ArrowRight,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { homeContent } from "@/constant/homeContent";
+import RevealOnView from "@/common/RevealOnView";
 import styles from "./styles.module.css";
 
 /* ── Inline animated number counter (same pattern as Cataract / Aesthetic) ── */
@@ -90,7 +92,7 @@ function ServiceIcon({ type }) {
 }
 
 export default function Services() {
-  const { eyebrow, title, items } = homeContent.services;
+  const { eyebrow, title, items, cta } = homeContent.services;
 
   return (
     <section className={styles.services} aria-labelledby="home-services-title">
@@ -122,30 +124,60 @@ export default function Services() {
       </div>
 
       <div className={styles.inner}>
-        <div className={styles.eyebrow}>
-          <span className={styles.eyebrowLine} aria-hidden="true" />
-          <span>{eyebrow}</span>
-        </div>
+        <RevealOnView variant="fadeUp" delay={0}>
+          <div className={styles.eyebrow}>
+            <span className={styles.eyebrowLine} aria-hidden="true" />
+            <span>{eyebrow}</span>
+          </div>
+        </RevealOnView>
 
-        <h2 id="home-services-title" className={styles.title}>
-          {title}
-        </h2>
+        <RevealOnView variant="fadeUp" delay={100}>
+          <h2 id="home-services-title" className={styles.title}>
+            {title}
+          </h2>
+        </RevealOnView>
 
         <div className={styles.grid}>
-          {items.map((item) => (
-            <Link key={item.title} href={item.href} className={styles.card}>
-              <ServiceIcon type={item.icon} />
-              <span className={styles.divider} aria-hidden="true" />
-              <span className={styles.cardCopy}>
-                <span className={styles.cardTitle}>{item.title}</span>
-                {item.description && (
-                  <span className={styles.cardDescription}>{item.description}</span>
-                )}
-                <span className={styles.learnMore}>Learn More</span>
-              </span>
-            </Link>
+          {items.map((item, index) => (
+            <RevealOnView
+              key={item.title}
+              variant="fadeUp"
+              delay={150 + index * 100}
+            >
+              <Link href={item.href} className={styles.card}>
+                <ServiceIcon type={item.icon} />
+                <span className={styles.divider} aria-hidden="true" />
+                <span className={styles.cardCopy}>
+                  <span className={styles.cardTitle}>{item.title}</span>
+                  {item.description && (
+                    <span className={styles.cardDescription}>
+                      {item.description}
+                    </span>
+                  )}
+                  <span className={styles.learnMore}>
+                    Learn More
+                    <ArrowRight
+                      size={15}
+                      className={styles.learnMoreArrow}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </span>
+              </Link>
+            </RevealOnView>
           ))}
         </div>
+
+        {cta && (
+          <RevealOnView variant="fadeUp" delay={650}>
+            <div className={styles.ctaRow}>
+              <Link href={cta.href} className={styles.cta}>
+                {cta.label}
+                <ArrowRight size={18} strokeWidth={2.2} aria-hidden="true" />
+              </Link>
+            </div>
+          </RevealOnView>
+        )}
       </div>
     </section>
   );

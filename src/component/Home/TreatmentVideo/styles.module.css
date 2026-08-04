@@ -57,7 +57,7 @@
 
 .sectionDescription {
   max-width: 538px;
-  margin: 16px 0 0;
+  margin: 22px 0 0;
   font-family: var(--font-satoshi);
   color: #64748b;
   font-size: 16px;
@@ -81,20 +81,57 @@
   gap: 16px;
   width: 100%;
   max-width: 538px;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   width: 100%;
-  min-height: 135px;
-  padding: 22px 18px;
+  min-height: 108px;
+  padding: 16px;
   border-radius: 12px;
   box-sizing: border-box;
   font-family: var(--font-satoshi);
   transition: all 0.3s ease;
+}
+
+.ctaWrapper {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--color-orange, #ed7612);
+  color: #ffffff;
+  font-family: var(--font-satoshi);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(237, 118, 18, 0.22);
+}
+
+.ctaBtn:hover {
+  background: #e0680a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(237, 118, 18, 0.35);
+}
+
+.ctaBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.ctaBtn:hover svg {
+  transform: translateX(4px);
 }
 
 .primary {

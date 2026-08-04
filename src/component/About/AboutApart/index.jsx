@@ -17,11 +17,20 @@ export default function AboutApart() {
   return (
     <section className={styles.section} aria-labelledby="about-apart-title">
       <div className={styles.background} aria-hidden="true" />
+      <div className={styles.glow1} aria-hidden="true" />
+      <div className={styles.glow2} aria-hidden="true" />
+
       <div className={styles.container}>
         <RevealOnView variant="fadeUp">
-          <h2 id="about-apart-title" className={styles.title}>
-            {plainTitle} <span>{accent}</span>
-          </h2>
+          <div className={styles.headerGroup}>
+            <div className={styles.eyebrow}>
+              <span className={styles.eyebrowDot} aria-hidden="true" />
+              <span>Why Choose Us</span>
+            </div>
+            <h2 id="about-apart-title" className={styles.title}>
+              {plainTitle} <span className={styles.titleAccent}>{accent}</span>
+            </h2>
+          </div>
         </RevealOnView>
 
         <div className={styles.grid}>
@@ -31,12 +40,13 @@ export default function AboutApart() {
               <RevealOnView
                 key={card.title}
                 variant="fadeUp"
-                delay={index * 110}
+                delay={index * 120}
                 className={styles.cardWrapper}
               >
                 <article className={styles.card}>
+                  <div className={styles.cardTopAccent} aria-hidden="true" />
                   <span className={styles.iconBox} aria-hidden="true">
-                    <Icon size={30} strokeWidth={2.1} />
+                    <Icon size={26} strokeWidth={2} className={styles.icon} />
                   </span>
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
