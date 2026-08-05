@@ -243,10 +243,10 @@
 
 @media (max-width: 991px) {
   .grid {
-    grid-template-columns: 1fr;
-    max-width: 440px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
     margin: 0 auto;
-    gap: 40px;
+    gap: 30px;
   }
   .header {
     margin-bottom: 48px;
@@ -254,14 +254,39 @@
 }
 
 @media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 30px;
+  }
   .testimonialsSection {
     padding: 60px 0 60px;
   }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .left {
+    align-items: center;
+  }
+
   .title {
+    max-width: 320px;
     font-size: 32px;
     line-height: 40px;
   }
+
+  .navButtons {
+    margin-bottom: 0;
+  }
+
   .eyebrow {
+    justify-content: center;
     font-size: 15px;
   }
   .eyebrowLine {

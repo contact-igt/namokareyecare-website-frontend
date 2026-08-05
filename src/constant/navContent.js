@@ -16,13 +16,13 @@ export const headerContent = {
     { label: "About Us", href: "/about" },
     {
       label: "Treatments",
-      href: "/treatments",
+      href: "#",
       dropdown: [
         { label: "Cataract", href: "/treatments/cataract" },
         { label: "Aesthetic Oculofacial", href: "/treatments/aesthetic-oculofacial" },
       ],
     },
-    { label: "Doctors", href: "/doctors" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ],
   appointment: {

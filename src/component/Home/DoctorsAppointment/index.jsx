@@ -103,10 +103,10 @@ export default function DoctorsAppointment() {
             )}
           </div>
 
-          <Link href={allDoctors.href} className={styles.allDoctors}>
+          {/* <Link href={allDoctors.href} className={styles.allDoctors}>
             <span>{allDoctors.label}</span>
             <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
-          </Link>
+          </Link> */}
         </div>
 
         <div className={`${styles.body} ${!hasStackedDoctors ? styles.singleDoctorBody : ""}`}>

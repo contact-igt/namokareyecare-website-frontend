@@ -294,7 +294,12 @@
   }
 
   .heading {
-    font-size: 30px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    font-size: clamp(28px, 7.5vw, 34px);
+    line-height: 1.15;
+    white-space: nowrap;
   }
 
   .reasonTitle {

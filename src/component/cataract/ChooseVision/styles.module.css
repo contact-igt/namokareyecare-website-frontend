@@ -298,8 +298,18 @@
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
   box-shadow: 0 8px 24px rgba(30, 96, 255, 0.25);
   transition: all 0.2s ease;
+}
+
+.ctaButton span {
+  min-width: 0;
+  text-align: center;
+}
+
+.ctaButton svg {
+  flex-shrink: 0;
 }
 
 .ctaButton:hover {
@@ -351,8 +361,16 @@
 
   .ctaButton {
     width: 100%;
-    justify-content: center;
+    min-height: 64px;
+    justify-content: space-between;
+    gap: 14px;
     font-size: 14px;
-    padding: 14px 20px;
+    line-height: 1.25;
+    padding: 14px 18px 14px 26px;
+  }
+
+  .ctaButton span {
+    flex: 1;
+    max-width: 250px;
   }
 }

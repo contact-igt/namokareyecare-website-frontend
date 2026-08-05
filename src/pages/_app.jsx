@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import "slick-carousel/slick/slick.css";
 import "@/style/globals.css";
 import Layout from "@/common/Layout";
 import Preloader from "@/common/Preloader";

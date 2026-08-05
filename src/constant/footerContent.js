@@ -9,9 +9,8 @@ export const footerContent = {
     "Dedicated to providing expert eye care with advanced ophthalmic and oculoplasty treatments to ensure your vision, well-being, and a healthier future.",
   links: [
     { label: "About Us", href: "/about" },
-    { label: "Doctors", href: "/doctors" },
-    { label: "Appointment", href: "/appointment" },
     { label: "Gallery", href: "/gallery" },
+    { label: "Appointment", href: "/appointment" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Condition", href: "/terms-condition" },
     { label: "FAQ", href: "/faq" },

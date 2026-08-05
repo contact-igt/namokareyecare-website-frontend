@@ -13,7 +13,7 @@ export const contactContent = {
       href: "tel:+919810419720",
     },
     stats: [
-      { value: "25+", label: "Years Excellence" },
+      { value: "30+", label: "Years Excellence" },
       { value: "50K+", label: "Happy Patients" },
     ],
   },
