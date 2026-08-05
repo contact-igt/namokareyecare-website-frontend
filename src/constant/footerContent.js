@@ -10,7 +10,7 @@ export const footerContent = {
   links: [
     { label: "About Us", href: "/about" },
     { label: "Gallery", href: "/gallery" },
-    { label: "Appointment", href: "/appointment" },
+    { label: "Appointment", href: "/contact" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Condition", href: "/terms-condition" },
     { label: "FAQ", href: "/faq" },
