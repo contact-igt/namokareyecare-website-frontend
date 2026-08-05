@@ -1,5 +1,51 @@
 export const homeContent = {
   banner: {
+    slides: [
+      {
+        id: 1,
+        eyebrow: "Precision. Compassion. Technology.",
+        title: [
+          "Restore",
+          "Confidence",
+          "with Advanced Eye",
+          "& Oculoplasty Care",
+        ],
+        description:
+          "At Namokar Eye & Oculoplasty Centre, every treatment plan is designed around your individual needs, helping you achieve better vision, improved comfort, and renewed confidence.",
+        cta: {
+          label: "Book Appointment",
+          href: "/appointment",
+        },
+        secondaryCta: {
+          label: "Call Us Now",
+          href: "tel:+919810419720",
+        },
+        bgImage: "/assets/Home/homebg.png",
+        bgPosition: "right -280px center",
+        showNabhBadge: true,
+      },
+      {
+        id: 2,
+        eyebrow: "Expertise Your Eyes Deserve",
+        title: [
+          "Complete Eye Care",
+          "for your Family",
+        ],
+        description:
+          "Dedicated to providing expert eye care with advanced ophthalmic and oculoplasty treatments to ensure your vision, well-being, and a healthier future.",
+        cta: {
+          label: "Contact Us Today",
+          href: "/contact",
+        },
+        secondaryCta: {
+          label: "Call Us Now",
+          href: "tel:+919810419720",
+        },
+        bgImage: "/assets/contact/banner.png",
+        bgPosition: "right center",
+        showNabhBadge: false,
+      },
+    ],
     eyebrow: "Precision. Compassion. Technology.",
     title: [
       "Restore",
@@ -13,7 +59,6 @@ export const homeContent = {
       label: "Book Appointment",
       href: "/appointment",
     },
-
     image: {
       src: "/assets/Home/home_page_doctor.png.png",
       alt: "Doctor consulting a patient and child",
@@ -68,7 +113,7 @@ export const homeContent = {
   },
   whyChoose: {
     eyebrow: "30+ Years of Excellence in Eye Care",
-    title: "Why Choose Namokar Eye\n& Oculoplasty Centre?",
+    title: "Why Choose Namokar\nEye & Oculoplasty Centre?",
     description:
       "Namokar Eye & Oculoplasty Centre combines specialized expertise, advanced diagnostics, and personalized patient care to deliver comprehensive eye treatment under one roof.",
     cta: {
@@ -113,7 +158,7 @@ export const homeContent = {
         variant: "top",
       },
       {
-        src: "/why_choose_us_new.jpg",
+        src: "/why_choose_us_new.JPG",
         alt: "Modern eye care treatment room",
         variant: "bottom",
       },
@@ -243,7 +288,7 @@ export const homeContent = {
     items: [
       {
         value: "30",
-        countTo: 25,
+        countTo: 30,
         durationMs: 1350,
         valueSuffix: "+",
         label: "Years of Experience in Eye Care",

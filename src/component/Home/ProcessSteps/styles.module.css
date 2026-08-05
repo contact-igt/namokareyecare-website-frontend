@@ -395,22 +395,29 @@
 
 @media (max-width: 767px) {
   .inner {
-    padding: 60px 20px 60px;
+    padding: 48px 20px 60px;
   }
 
   .eyebrow {
-    gap: 12px;
+    gap: 10px;
     font-size: 15px;
     line-height: 22px;
   }
 
+  .eyebrow span:not(.eyebrowLine) {
+    white-space: nowrap;
+  }
+
   .eyebrowLine {
-    width: 72px;
+    width: 48px;
+    flex: 0 1 48px;
   }
 
   .title {
-    font-size: 32px;
-    line-height: 40px;
+    max-width: 340px;
+    margin: 26px auto 0;
+    font-size: 31px;
+    line-height: 39px;
   }
 
   .steps {

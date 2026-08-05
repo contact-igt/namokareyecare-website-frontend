@@ -80,7 +80,7 @@ export default function TreatmentVideo() {
                 >
                   <div className={styles.cardHeader}>
                     <span className={styles.iconBox} aria-hidden="true">
-                      <Icon size={28} strokeWidth={1.9} />
+                      <Icon size={20} strokeWidth={1.9} />
                     </span>
                     <h3 className={styles.cardTitle}>{card.title}</h3>
                   </div>

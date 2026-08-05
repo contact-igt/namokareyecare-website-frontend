@@ -30,12 +30,20 @@ export default function BannerNav() {
               key={item.label}
               className={item.dropdown ? styles.dropdownContainer : styles.navItemWrapper}
             >
-              <Link href={item.href} className={styles.navLink}>
-                {item.label}
-                {item.dropdown && (
+              {item.dropdown ? (
+                <button
+                  type="button"
+                  className={styles.navLink}
+                  onClick={(e) => e.preventDefault()}
+                >
+                  {item.label}
                   <ChevronDown size={17} strokeWidth={2.4} aria-hidden="true" />
-                )}
-              </Link>
+                </button>
+              ) : (
+                <Link href={item.href} className={styles.navLink}>
+                  {item.label}
+                </Link>
+              )}
               {item.dropdown && (
                 <div className={styles.dropdownMenu}>
                   {item.dropdown.map((subItem) => (
@@ -74,24 +82,13 @@ export default function BannerNav() {
           {navItems.map((item) => (
             <div key={item.label} className={styles.mobileNavItem}>
               <div className={styles.mobileLinkRow}>
-                <Link
-                  href={item.href}
-                  className={styles.mobileLink}
-                  onClick={() => {
-                    setIsOpen(false);
-                    setMobileServicesOpen(false);
-                  }}
-                >
-                  {item.label}
-                </Link>
-                {item.dropdown && (
+                {item.dropdown ? (
                   <button
                     type="button"
-                    className={styles.mobileDropdownToggle}
+                    className={styles.mobileLink}
                     onClick={() => setMobileServicesOpen((prev) => !prev)}
-                    aria-label={`Toggle ${item.label} submenu`}
-                    aria-expanded={mobileServicesOpen}
                   >
+                    <span>{item.label}</span>
                     <ChevronDown
                       size={18}
                       strokeWidth={2.3}
@@ -100,6 +97,17 @@ export default function BannerNav() {
                       }`}
                     />
                   </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={styles.mobileLink}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setMobileServicesOpen(false);
+                    }}
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </div>
               {item.dropdown && (

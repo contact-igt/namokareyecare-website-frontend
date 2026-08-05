@@ -87,6 +87,10 @@
   box-sizing: border-box;
 }
 
+.mobileSlider {
+  display: none;
+}
+
 .cardWrapper {
   height: 100%;
   display: flex;
@@ -233,6 +237,73 @@
   .eyebrowLine {
     width: 44px;
   }
+  .grid {
+    display: none;
+  }
+
+  .mobileSlider {
+    display: block;
+    max-width: 430px;
+    margin: 0 auto;
+    padding-bottom: 36px;
+  }
+
+  .slideItem {
+    padding: 0 4px;
+  }
+
+  .mobileSlider :global(.slick-list) {
+    overflow: hidden;
+  }
+
+  .mobileSlider :global(.slick-track) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .mobileSlider :global(.slick-slide) {
+    height: auto;
+  }
+
+  .mobileSlider :global(.slick-slide > div) {
+    height: 100%;
+  }
+
+  .mobileSlider :global(.slick-dots) {
+    position: static;
+    display: flex !important;
+    justify-content: center;
+    gap: 8px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobileSlider :global(.slick-dots li) {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  .mobileSlider :global(.slick-dots button) {
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: #cfe9ff;
+    color: transparent;
+    font-size: 0;
+    cursor: pointer;
+    transition: width 0.2s ease, background 0.2s ease;
+  }
+
+  .mobileSlider :global(.slick-dots .slick-active button) {
+    width: 22px;
+    background: #2aa7ff;
+  }
+
   .cardBody {
     padding: 20px 4px 10px;
   }

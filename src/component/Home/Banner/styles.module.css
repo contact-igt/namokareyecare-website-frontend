@@ -5,31 +5,29 @@
   display: flex;
   align-items: center;
   background-color: #f7f0e7;
+  overflow: hidden;
 }
 
-.hero::before {
-  content: "";
+.heroBg {
   position: absolute;
   inset: 0;
-  background-image: url("/assets/Home/homebg.png");
   background-repeat: no-repeat;
-  background-position: right -160px center;
+  background-position: right center;
   background-size: cover;
   z-index: 0;
 }
 
-.hero::after {
-  content: "";
+.heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 45%, rgba(255, 255, 255, 0) 100%);
-  z-index: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
   pointer-events: none;
 }
 
 .heroInner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(calc(100% - 56px), 1440px);
   margin: 0 auto;
   padding: 80px 0 160px;
@@ -124,12 +122,10 @@
   left: -100%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.85) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.85) 50%,
+      transparent 100%);
   transform: skewX(-25deg);
   animation: badgeShimmer 4s infinite ease-in-out;
 }
@@ -192,9 +188,12 @@
 }
 
 @keyframes badgePulseGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 4px 18px rgba(184, 134, 11, 0.15), 0 2px 8px rgba(0, 0, 0, 0.04);
   }
+
   50% {
     box-shadow: 0 4px 26px rgba(212, 175, 55, 0.35), 0 2px 12px rgba(113, 31, 28, 0.12);
   }
@@ -204,15 +203,20 @@
   0% {
     left: -100%;
   }
-  20%, 100% {
+
+  20%,
+  100% {
     left: 200%;
   }
 }
 
 @keyframes logoSoftPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.08);
   }
@@ -349,7 +353,42 @@
   font-weight: 500;
 }
 
+/* Minimal Slide Counter */
+.slideCounterWrapper {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 56px), 1440px);
+  padding-left: 20px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-satoshi);
+  pointer-events: none;
+}
 
+.slideCounterActive {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a73e8;
+  letter-spacing: 1px;
+}
+
+.slideCounterDivider {
+  width: 24px;
+  height: 2px;
+  background: rgba(26, 115, 232, 0.35);
+  border-radius: 2px;
+}
+
+.slideCounterTotal {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888888;
+  letter-spacing: 1px;
+}
 
 /* Media Queries */
 @media (max-width: 1199px) {
@@ -375,9 +414,8 @@
     min-height: auto;
   }
 
-  .hero::before {
-    background-image: url("/assets/Home/herobgmb.png");
-    background-position: center center;
+  .heroBg {
+    background-position: center center !important;
   }
 
   .heroInner {

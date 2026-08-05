@@ -145,21 +145,16 @@
 /* Benefits Grid */
 .benefitsGrid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
-.benefitsGrid > *:nth-child(1),
-.benefitsGrid > *:nth-child(2),
-.benefitsGrid > *:nth-child(3) {
-  grid-column: span 4;
+.benefitsGrid > * {
+  min-width: 0;
 }
 
-.benefitsGrid > *:nth-child(4),
-.benefitsGrid > *:nth-child(5),
-.benefitsGrid > *:nth-child(6),
-.benefitsGrid > *:nth-child(7) {
-  grid-column: span 3;
+.benefitsGrid > *:last-child:nth-child(3n + 1) {
+  grid-column: 2;
 }
 
 .benefitCard {
@@ -169,6 +164,7 @@
   text-align: center;
   justify-content: center;
   gap: 12px;
+  min-height: 164px;
   padding: 22px 14px;
   background: #ffffff;
   border-radius: 16px;
@@ -283,6 +279,7 @@
   font-weight: 700;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
   white-space: nowrap;
   box-shadow: 0 4px 14px rgba(237, 118, 18, 0.25);
 }
@@ -299,8 +296,14 @@
     gap: 28px;
   }
 
-  .benefitsGrid > * {
-    grid-column: span 6 !important;
+  .benefitsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .benefitsGrid > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 16px) / 2));
   }
 }
 
@@ -324,13 +327,19 @@
 
   .ctaBanner {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
     text-align: center;
-    padding: 24px;
+    padding: 24px 20px;
   }
 
   .bannerLeft {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
+    width: 100%;
   }
 
   .bannerDivider {
@@ -359,16 +368,38 @@
     grid-template-columns: 1fr;
   }
 
-  .benefitsGrid > * {
-    grid-column: span 1 !important;
+  .benefitsGrid > *:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .benefitCard {
+    min-height: 150px;
   }
 
   .bannerQuote {
     font-size: 17px;
   }
 
+  .bannerIconCircle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .bannerQuote {
+    max-width: 300px;
+    margin-inline: auto;
+    line-height: 1.45;
+  }
+
   .bannerBtn {
-    width: 100%;
+    width: min(100%, 320px);
+    min-height: 64px;
     justify-content: center;
+    padding: 14px 24px;
+    line-height: 1.25;
+    white-space: normal;
+    text-align: center;
   }
 }

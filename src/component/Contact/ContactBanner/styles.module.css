@@ -91,7 +91,7 @@
   display: block;
 }
 
-.titleLine + .titleLine {
+.titleLine+.titleLine {
   margin-top: 10px;
 }
 
@@ -360,5 +360,3 @@
     font-size: 14px;
   }
 }
-
-

@@ -104,7 +104,7 @@ export default function Services() {
               <Award className={styles.statsIcon} size={22} />
             </div>
             <div className={styles.statsContent}>
-              <AnimatedStat countTo={25} suffix="+" durationMs={1200} />
+              <AnimatedStat countTo={30} suffix="+" durationMs={1200} />
               <span className={styles.statsLabel}>Years Excellence</span>
             </div>
           </div>

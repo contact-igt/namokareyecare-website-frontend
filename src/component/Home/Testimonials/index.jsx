@@ -68,9 +68,26 @@ export default function Testimonials() {
   const { eyebrow, title, reviews } = testimonialsContent;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [itemsToShow, setItemsToShow] = useState(3);
   const autoScrollTimer = useRef(null);
 
   const totalReviews = reviews.length;
+
+  useEffect(() => {
+    const updateItemsToShow = () => {
+      if (window.innerWidth < 768) {
+        setItemsToShow(1);
+      } else if (window.innerWidth < 992) {
+        setItemsToShow(2);
+      } else {
+        setItemsToShow(3);
+      }
+    };
+
+    updateItemsToShow();
+    window.addEventListener("resize", updateItemsToShow);
+    return () => window.removeEventListener("resize", updateItemsToShow);
+  }, []);
 
   const stopAutoScroll = () => {
     if (autoScrollTimer.current) {
@@ -101,10 +118,10 @@ export default function Testimonials() {
     setActiveIndex((prev) => (prev + 1) % totalReviews);
   };
 
-  // Calculate visible range of 3 items for larger screens or sliding window
+  // Calculate visible range of items based on responsive itemsToShow
   const getVisibleReviews = () => {
     const items = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < itemsToShow; i++) {
       items.push(reviews[(activeIndex + i) % totalReviews]);
     }
     return items;

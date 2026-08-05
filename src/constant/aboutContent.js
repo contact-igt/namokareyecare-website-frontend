@@ -13,7 +13,7 @@ export const aboutContent = {
       href: "/contact",
     },
     stats: [
-      { value: "25+", label: "Years Excellence" },
+      { value: "30+", label: "Years Excellence" },
       { value: "50K+", label: "Happy Patients" },
     ],
   },
@@ -35,7 +35,7 @@ export const aboutContent = {
     highlights: [
       { title: "Johns Hopkins Hospital, Baltimore, USA", label: "Observership", icon: "award" },
       { title: "25K+ Surgeries", label: "Performed", icon: "users" },
-      { title: "25+ Years", label: "Experience", icon: "calendar" },
+      { title: "30+ Years", label: "Experience", icon: "calendar" },
     ],
     cta: {
       label: "Book with Dr. Poonam",
