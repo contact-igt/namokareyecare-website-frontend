@@ -6,7 +6,7 @@ export const contactContent = {
       "At Namokar Eye & Oculoplasty Centre, every treatment plan is designed around your individual needs, helping you achieve better vision, improved comfort, and renewed confidence.",
     cta: {
       label: "Book Appointment Now",
-      href: "/appointment",
+      href: "/contact",
     },
     secondaryCta: {
       label: "Call Us Now",
@@ -49,7 +49,7 @@ export const contactContent = {
         icon: "Clock",
         title: "Working Hours",
         text: "Mon - Sat: 9:00 AM - 6:00 PM\nSunday: Closed",
-        href: "/appointment",
+        href: "/contact",
         linkLabel: "Book Visit",
       },
     ],

@@ -160,7 +160,7 @@ export default function CataractBanner() {
 
           <RevealOnView variant="fadeUp" delay={480}>
             <div className={styles.ctaGroup}>
-              <Link href="/appointment" className={styles.cta}>
+              <Link href="/contact" className={styles.cta}>
                 Book Appointment
                 <ArrowRight size={18} strokeWidth={2.2} aria-hidden="true" />
               </Link>

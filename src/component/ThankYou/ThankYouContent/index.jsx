@@ -28,7 +28,7 @@ export default function ThankYouContent() {
                 </span>
               </Link>
 
-              <Link href="/appointment" className={styles.btnSecondary}>
+              <Link href="/contact" className={styles.btnSecondary}>
                 <span>Book Another</span>
                 <span className={styles.iconCircle}>
                   <ArrowUpRight size={18} strokeWidth={2.2} />

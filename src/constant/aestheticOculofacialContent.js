@@ -10,11 +10,11 @@ export const aestheticOculofacialContent = {
       "Aesthetic oculoplasty focuses on improving the appearance of the eyelids, under-eye area, and surrounding eye region while keeping eye safety and natural results as the priority.",
     cta: {
       label: "Book Appointment",
-      href: "/appointment",
+      href: "/contact",
     },
     secondaryCta: {
       label: "Consult Dr. Poonam Jain",
-      href: "/appointment",
+      href: "/contact",
     },
     stats: [
       {
@@ -230,7 +230,7 @@ export const aestheticOculofacialContent = {
     title: "Want Your Eyes to Look More Refreshed Without Losing Natural Expression?",
     description: "Book a consultation to understand the right aesthetic oculoplasty option for your concern.",
     btnLabel: "Book Aesthetic Oculoplasty Consultation",
-    href: "/appointment",
+    href: "/contact",
   },
   beforeAfterSection: {
     title: "Before and After Aesthetic Oculoplasty",

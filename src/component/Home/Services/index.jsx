@@ -168,7 +168,7 @@ export default function Services() {
           ))}
         </div>
 
-        {cta && (
+        {/* {cta && (
           <RevealOnView variant="fadeUp" delay={650}>
             <div className={styles.ctaRow}>
               <Link href={cta.href} className={styles.cta}>
@@ -177,7 +177,7 @@ export default function Services() {
               </Link>
             </div>
           </RevealOnView>
-        )}
+        )} */}
       </div>
     </section>
   );

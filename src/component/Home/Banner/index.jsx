@@ -51,7 +51,7 @@ export default function Banner() {
 
     autoScrollTimer.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 7000);
 
     return () => stopAutoScroll();
   }, [isPaused, slides.length]);

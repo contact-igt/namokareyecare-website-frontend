@@ -41,7 +41,7 @@ export default function AestheticOculoplastyTreatments() {
                   <h3 className={styles.cardTitle}>{treatment.title}</h3>
                   <p className={styles.cardDescription}>{treatment.description}</p>
                   <div className={styles.buttonWrapper}>
-                    <Link href="/appointment" className={styles.ctaButton}>
+                    <Link href="/contact" className={styles.ctaButton}>
                       Book Consultation
                     </Link>
                   </div>
