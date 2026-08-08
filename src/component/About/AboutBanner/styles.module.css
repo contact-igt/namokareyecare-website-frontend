@@ -105,11 +105,128 @@
   line-height: 1.6;
 }
 
+/* Highlighted NABH Certified Badge */
+.nabhBadgeWrapper {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.nabhBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 18px 8px 10px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffdf8 100%);
+  border: 1.5px solid #e2cc86;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(184, 134, 11, 0.15), 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: default;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: badgePulseGlow 3.5s infinite ease-in-out;
+}
+
+.nabhBadge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.85) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: badgeShimmer 4s infinite ease-in-out;
+}
+
+.nabhBadge:hover {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 8px 25px rgba(184, 134, 11, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d4af37;
+}
+
+.nabhLogoBox {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #f0e6c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.nabhBadgeLogo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  animation: logoSoftPulse 3s infinite ease-in-out;
+}
+
+.nabhBadgeTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nabhBadgeTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-satoshi);
+  color: #711f1c;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+.shieldIcon {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.nabhBadgeSubtitle {
+  font-family: var(--font-satoshi);
+  color: #555555;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@keyframes badgePulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 18px rgba(184, 134, 11, 0.15), 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  50% {
+    box-shadow: 0 4px 26px rgba(212, 175, 55, 0.35), 0 2px 12px rgba(113, 31, 28, 0.12);
+  }
+}
+
+@keyframes badgeShimmer {
+  0% { left: -100%; }
+  20%, 100% { left: 200%; }
+}
+
+@keyframes logoSoftPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
 .ctaGroup {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 24px;
   flex-wrap: wrap;
 }
 

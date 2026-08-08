@@ -20,6 +20,7 @@ export const headerContent = {
       dropdown: [
         { label: "Cataract", href: "/treatments/cataract" },
         { label: "Aesthetic Oculofacial", href: "/treatments/aesthetic-oculofacial" },
+        { label: "Reconstructive Oculoplasty", href: "/treatments/reconstructive-oculoplasty" },
       ],
     },
     { label: "Gallery", href: "/gallery" },

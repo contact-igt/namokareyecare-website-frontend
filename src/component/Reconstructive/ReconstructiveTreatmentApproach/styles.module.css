@@ -1,0 +1,333 @@
+.section {
+  width: 100%;
+  padding: 85px 0 95px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, var(--site-width, 1320px));
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.eyebrowRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-orange, #ed7612);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dash {
+  color: var(--color-orange, #ed7612);
+  font-weight: 700;
+}
+
+.heading {
+  margin: 0 0 16px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+}
+
+.titleLine1 {
+  color: var(--color-navy, #1b4281);
+}
+
+.titleLine2 {
+  color: var(--color-orange, #ed7612);
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 680px;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(113, 31, 28, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(135deg, #1a1a2e 0%, #711f1c 100%);
+}
+
+.doctorImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayBanner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px;
+  padding: 20px 24px;
+  background: rgba(240, 247, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(224, 240, 254, 0.9);
+  box-shadow: 0 10px 28px rgba(27, 66, 129, 0.12);
+}
+
+.bannerIconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-orange, #ed7612);
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(237, 118, 18, 0.3);
+}
+
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bannerTitle {
+  margin: 0;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-navy, #1b4281);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.bannerSubtitle {
+  margin: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #475569;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+/* Right Column Vertical Timeline */
+.rightCol {
+  width: 100%;
+}
+
+.timelineTrack {
+  position: relative;
+  padding-left: 28px;
+}
+
+.connectingLine {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 20px;
+  width: 2px;
+  border-left: 2px dashed rgba(237, 118, 18, 0.35);
+  z-index: 1;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.stepItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stepNumBadge {
+  position: absolute;
+  left: -28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--color-orange, #ed7612);
+  color: var(--color-orange, #ed7612);
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(237, 118, 18, 0.15);
+  z-index: 3;
+}
+
+.stepCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(27, 66, 129, 0.03);
+  margin-left: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 28px rgba(237, 118, 18, 0.08);
+  border-color: rgba(237, 118, 18, 0.3);
+}
+
+.stepIconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff5ec;
+  color: var(--color-orange, #ed7612);
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stepCard:hover .stepIconCircle {
+  background: var(--color-orange, #ed7612);
+  color: #ffffff;
+}
+
+.stepTextContent {
+  flex: 1;
+}
+
+.stepTitle {
+  margin: 0 0 4px;
+  font-family: var(--font-satoshi, "Satoshi", sans-serif);
+  color: var(--color-navy, #1b4281);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stepDescription {
+  margin: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.stepChevron {
+  color: #cbd5e1;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stepCard:hover .stepChevron {
+  color: var(--color-orange, #ed7612);
+  transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageCard {
+    min-height: 380px;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 55px 0;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .timelineTrack {
+    padding-left: 20px;
+  }
+
+  .connectingLine {
+    left: 14px;
+  }
+
+  .stepNumBadge {
+    left: -20px;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .stepCard {
+    margin-left: 16px;
+    padding: 16px 16px;
+    gap: 14px;
+  }
+
+  .stepIconCircle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stepTitle {
+    font-size: 16px;
+  }
+
+  .stepDescription {
+    font-size: 13px;
+  }
+}

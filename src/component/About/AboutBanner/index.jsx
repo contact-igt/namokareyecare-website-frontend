@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, Phone, Users } from "lucide-react";
+import { ArrowRight, Award, Phone, Users, ShieldCheck } from "lucide-react";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import { aboutContent } from "@/constant/aboutContent";
 import styles from "./styles.module.css";
@@ -10,17 +10,6 @@ export default function AboutBanner() {
 
   return (
     <section className={styles.hero} aria-label="About Namokar Eye and Oculoplasty Centre">
-      <div className={styles.nabhLogoWrapper}>
-        <Image
-          src="/assets/Header/Patient_saftey_logo.png"
-          alt="Patient Safety and Quality of Care NABH Certified Logo"
-          width={100}
-          height={100}
-          className={styles.nabhLogo}
-          priority
-        />
-      </div>
-
       <div className={styles.heroInner}>
         <div className={styles.copy}>
           <RevealOnView variant="fadeUp" delay={0}>
@@ -44,6 +33,31 @@ export default function AboutBanner() {
 
           <RevealOnView variant="fadeUp" delay={350}>
             <p className={styles.description}>{description}</p>
+          </RevealOnView>
+
+          <RevealOnView variant="fadeUp" delay={420}>
+            <div className={styles.nabhBadgeWrapper}>
+              <div className={styles.nabhBadge}>
+                <div className={styles.nabhLogoBox}>
+                  <Image
+                    src="/assets/Header/Patient_saftey_logo.png"
+                    alt="NABH Certified Logo"
+                    width={32}
+                    height={32}
+                    className={styles.nabhBadgeLogo}
+                  />
+                </div>
+                <div className={styles.nabhBadgeTextGroup}>
+                  <span className={styles.nabhBadgeTitle}>
+                    <ShieldCheck size={16} className={styles.shieldIcon} />
+                    NABH Certified Eye Centre
+                  </span>
+                  <span className={styles.nabhBadgeSubtitle}>
+                    Highest Quality & Patient Safety Standards
+                  </span>
+                </div>
+              </div>
+            </div>
           </RevealOnView>
 
           <RevealOnView variant="fadeUp" delay={480}>
