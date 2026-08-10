@@ -299,6 +299,7 @@
 
 .statsCard {
   background: #ffffff;
+  border-left: 6px solid #1a73e8;
   border-radius: 12px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
   display: flex;
