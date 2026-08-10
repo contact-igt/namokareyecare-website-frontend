@@ -14,7 +14,7 @@ export const homeContent = {
           "At Namokar Eye & Oculoplasty Centre, every treatment plan is designed around your individual needs, helping you achieve better vision, improved comfort, and renewed confidence.",
         cta: {
           label: "Book Appointment",
-          href: "/contact",
+          href: "#appointment",
         },
         secondaryCta: {
           label: "Call Us Now",
@@ -34,8 +34,8 @@ export const homeContent = {
         description:
           "Dedicated to providing expert eye care with advanced ophthalmic and oculoplasty treatments to ensure your vision, well-being, and a healthier future.",
         cta: {
-          label: "Contact Us Today",
-          href: "/contact",
+          label: "Contact Us",
+          href: "/contact#appointment",
         },
         secondaryCta: {
           label: "Call Us Now",
@@ -57,7 +57,7 @@ export const homeContent = {
       "At Namokar Eye & Oculoplasty Centre, every treatment plan is designed around your individual needs, helping you achieve better vision, improved comfort, and renewed confidence.",
     cta: {
       label: "Book Appointment",
-      href: "/contact",
+      href: "#appointment",
     },
     image: {
       src: "/assets/Home/home_page_doctor.png.png",
@@ -217,7 +217,7 @@ export const homeContent = {
       "At Namokar Eye & Oculoplasty Centre, we restore vision, function, comfort, and confidence through specialized eye care.",
     cta: {
       label: "Book Consultation",
-      href: "/contact",
+      href: "/contact#appointment",
     },
     media: {
       src: "/assets/Home/why-choice-hospital.png",

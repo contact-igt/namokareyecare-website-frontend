@@ -85,6 +85,7 @@ export default function DoctorsAppointment() {
 
   return (
     <section
+      id="appointment"
       className={styles.doctorsSection}
       aria-labelledby="doctors-title"
     >

@@ -277,7 +277,7 @@
 
 .statsCardWrapper {
   position: absolute;
-  bottom: 76px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   width: min(calc(100% - 56px), 1440px);
@@ -292,7 +292,6 @@
   align-items: center;
   gap: 48px;
   padding: 20px 40px;
-  border-left: 6px solid #1a73e8;
   border-radius: 12px;
   background: #ffffff;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
