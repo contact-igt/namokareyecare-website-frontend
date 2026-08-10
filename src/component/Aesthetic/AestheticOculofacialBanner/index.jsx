@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, UserCheck, Award, Eye, Star, Users } from "lucide-react";
+import { ArrowRight, UserCheck, Award, Eye, Star, Users, ShieldCheck } from "lucide-react";
 import RevealOnView, { WordReveal } from "@/common/RevealOnView";
 import { aestheticOculofacialContent } from "@/constant/aestheticOculofacialContent";
 import styles from "./styles.module.css";
@@ -105,18 +105,6 @@ export default function AestheticOculofacialBanner() {
         />
       </div>
 
-      {/* Top right NABH Logo */}
-      <div className={styles.nabhLogoWrapper}>
-        <Image
-          src="/assets/Header/Patient_saftey_logo.png"
-          alt="Patient Safety & Quality of Care NABH Certified Logo"
-          width={100}
-          height={100}
-          className={styles.nabhLogo}
-          priority
-        />
-      </div>
-
       <div className={styles.contentContainer}>
         <div className={styles.textContent}>
           <RevealOnView variant="fadeUp" delay={0}>
@@ -140,6 +128,31 @@ export default function AestheticOculofacialBanner() {
 
           <RevealOnView variant="fadeUp" delay={350}>
             <p className={styles.description}>{description}</p>
+          </RevealOnView>
+
+          <RevealOnView variant="fadeUp" delay={420}>
+            <div className={styles.nabhBadgeWrapper}>
+              <div className={styles.nabhBadge}>
+                <div className={styles.nabhLogoBox}>
+                  <Image
+                    src="/assets/Header/Patient_saftey_logo.png"
+                    alt="NABH Certified Logo"
+                    width={32}
+                    height={32}
+                    className={styles.nabhBadgeLogo}
+                  />
+                </div>
+                <div className={styles.nabhBadgeTextGroup}>
+                  <span className={styles.nabhBadgeTitle}>
+                    <ShieldCheck size={16} className={styles.shieldIcon} />
+                    NABH Certified Eye Centre
+                  </span>
+                  <span className={styles.nabhBadgeSubtitle}>
+                    Highest Quality & Patient Safety Standards
+                  </span>
+                </div>
+              </div>
+            </div>
           </RevealOnView>
 
           <RevealOnView variant="fadeUp" delay={480}>
