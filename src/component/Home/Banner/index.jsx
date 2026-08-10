@@ -35,7 +35,6 @@ const copyContainerVariants = {
 export default function Banner() {
   const slides = homeContent.banner.slides || [homeContent.banner];
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const autoScrollTimer = useRef(null);
 
   const stopAutoScroll = () => {
@@ -47,14 +46,14 @@ export default function Banner() {
 
   useEffect(() => {
     stopAutoScroll();
-    if (isPaused || slides.length <= 1) return undefined;
+    if (slides.length <= 1) return undefined;
 
     autoScrollTimer.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 7000);
 
     return () => stopAutoScroll();
-  }, [isPaused, slides.length]);
+  }, [slides.length]);
 
   const activeSlide = slides[currentSlide];
 
@@ -62,8 +61,6 @@ export default function Banner() {
     <section
       className={styles.hero}
       aria-label="Namokar Eye hero"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
       {/* Dynamic Background Image Layer with Lens Focus Transition */}
       <AnimatePresence mode="sync">

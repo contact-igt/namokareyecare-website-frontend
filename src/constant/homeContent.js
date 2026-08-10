@@ -43,7 +43,7 @@ export const homeContent = {
         },
         bgImage: "/assets/contact/banner.png",
         bgPosition: "right center",
-        showNabhBadge: false,
+        showNabhBadge: true,
       },
     ],
     eyebrow: "Precision. Compassion. Technology.",
