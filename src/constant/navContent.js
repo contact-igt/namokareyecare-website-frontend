@@ -28,6 +28,6 @@ export const headerContent = {
   ],
   appointment: {
     label: "Get Appointment",
-    href: "/contact",
+    href: "/contact#appointment",
   },
 };

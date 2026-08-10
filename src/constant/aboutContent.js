@@ -6,11 +6,11 @@ export const aboutContent = {
       "Namokar Eye & Oculoplasty Centre brings together advanced ophthalmic technology, ethical clinical judgment, and compassionate care for every patient and family we serve.",
     cta: {
       label: "Book Appointment Now",
-      href: "/contact",
+      href: "/contact#appointment",
     },
     secondaryCta: {
       label: "Contact Us",
-      href: "/contact",
+      href: "/contact#appointment",
     },
     stats: [
       { value: "30+", label: "Years Excellence" },
@@ -39,7 +39,7 @@ export const aboutContent = {
     ],
     cta: {
       label: "Book with Dr. Poonam",
-      href: "/contact",
+      href: "/contact#appointment",
     },
   },
   apart: {

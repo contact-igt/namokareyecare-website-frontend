@@ -16,7 +16,7 @@ export default function CataractFaq() {
   };
 
   return (
-    <section className={styles.section} aria-labelledby="cataract-faq-title">
+    <section id="faq" className={styles.section} aria-labelledby="cataract-faq-title">
       <div className={styles.container}>
         <RevealOnView variant="fadeUp">
           <h2 id="cataract-faq-title" className={styles.title}>

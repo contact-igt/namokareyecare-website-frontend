@@ -121,7 +121,7 @@ export default function ContactFormMap() {
   };
 
   return (
-    <section className={styles.section} aria-labelledby="contact-form-title">
+    <section id="appointment" className={styles.section} aria-labelledby="contact-form-title">
       <div className={styles.container}>
         <RevealOnView variant="fadeUp">
           <div className={styles.header}>

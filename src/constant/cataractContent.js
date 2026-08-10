@@ -376,7 +376,7 @@ export const cataractContent = {
     },
     cta: {
       label: "Get a Personalised Lens Recommendation",
-      href: "/contact",
+      href: "/contact#appointment",
     },
   },
   modernTech: {
@@ -452,7 +452,7 @@ export const cataractContent = {
       "If cataract is affecting your reading, driving, work, or routine activities, schedule a consultation and understand the right treatment option for your eyes.",
     cta: {
       label: "Book Cataract Consultation",
-      href: "/contact",
+      href: "/contact#appointment",
     },
   },
 };

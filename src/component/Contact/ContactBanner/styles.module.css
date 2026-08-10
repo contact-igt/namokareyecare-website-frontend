@@ -277,7 +277,7 @@
 
 .statsCardWrapper {
   position: absolute;
-  bottom: 76px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   width: min(calc(100% - 56px), 1440px);

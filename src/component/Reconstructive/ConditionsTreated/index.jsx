@@ -77,7 +77,7 @@ export default function ConditionsTreated() {
                       {condition.description}
                     </p>
                     <div className={styles.buttonWrapper}>
-                      <Link href="/contact" className={styles.ctaButton}>
+                      <Link href="/contact#appointment" className={styles.ctaButton}>
                         Book Consultation
                       </Link>
                     </div>

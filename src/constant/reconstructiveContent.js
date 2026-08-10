@@ -10,11 +10,11 @@ export const reconstructiveContent = {
       "Reconstructive oculoplasty treats medical and functional concerns of the eyelids, tear ducts, eye socket, and surrounding eye structures with a focus on safety, comfort, and natural restoration.",
     cta: {
       label: "Book Appointment",
-      href: "/contact",
+      href: "/contact#appointment",
     },
     secondaryCta: {
       label: "Talk to Our Oculoplasty Team",
-      href: "/contact",
+      href: "/contact#appointment",
     },
     stats: [
       {
@@ -236,6 +236,6 @@ export const reconstructiveContent = {
     description:
       "Many eyelid and tear duct conditions can be corrected with proper diagnosis and timely care.",
     btnLabel: "Book Reconstructive Oculoplasty Consultation",
-    href: "/contact",
+    href: "/contact#appointment",
   },
 };
