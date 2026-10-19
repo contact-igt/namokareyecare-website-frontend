@@ -100,8 +100,10 @@
 
 .singleDoctorBody {
   grid-template-columns: minmax(320px, 420px) minmax(340px, 440px);
+  max-width: 900px;
   gap: 40px;
-  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
   align-items: start;
 }
 
